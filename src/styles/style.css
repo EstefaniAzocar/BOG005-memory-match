@@ -1,0 +1,5 @@
+@import url("./pagesInit.css");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
