@@ -1,0 +1,28 @@
+$font-family-Text: 'Mochiy Pop One', sans-serif;
+$color-text: #28282c;
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin perfect-center {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+
+@mixin general-text {
+    font-family: $font-family-Text;
+    color: $color-text;
+    text-align: center;
+}
+
+@mixin flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,75 @@
+@import './generics.scss';
+
+.gameTheme{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    @include flex-column-center();
+    background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+    gap: 20px;
+
+    &_container {
+        width: 90%;
+        @include flex-column-center();
+        gap: 60px;
+    }
+
+    &_text {
+        width: 90%;
+        @include perfect-center();
+    }
+
+    &--textTittle{
+        @include general-text();        
+    }
+
+    &_containerCards {
+        width: 90%;
+        @include flex-wrap-center();
+        gap: 60px;
+
+    }
+
+    &_card {
+        width: 60%;
+        max-width: 180px;
+        height: 220px;
+        @include perfect-center();
+        background-color: #112F91;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background: #1a3aa3;
+        }
+
+    }
+
+    &_cardImg {
+        width: 60%;
+    }
+
+}
+
+@media (min-width: 750px) {
+
+    .gameTheme{
+ 
+        &_card {
+            height: 270px;   
+        }
+    
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .gameTheme{
+ 
+        &_card {
+            max-width: 220px;
+            height: 300px;   
+        }
+    
+    }
+}

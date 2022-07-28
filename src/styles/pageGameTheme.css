@@ -1,0 +1,56 @@
+.gameTheme {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+  gap: 20px; }
+  .gameTheme_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; }
+  .gameTheme_text {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .gameTheme--textTittle {
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #28282c;
+    text-align: center; }
+  .gameTheme_containerCards {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; }
+  .gameTheme_card {
+    width: 60%;
+    max-width: 180px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #112F91;
+    border-radius: 5px;
+    cursor: pointer; }
+    .gameTheme_card:hover {
+      background: #1a3aa3; }
+  .gameTheme_cardImg {
+    width: 60%; }
+
+@media (min-width: 750px) {
+  .gameTheme_card {
+    height: 270px; } }
+
+@media (min-width: 1024px) {
+  .gameTheme_card {
+    max-width: 220px;
+    height: 300px; } }
