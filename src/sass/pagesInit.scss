@@ -42,12 +42,15 @@
     }
 
     &_buttonInit {
-        width: 70px;
-        height: 40px;
+        width: 80px;
+        height: 30px;
         border-radius: 20px;
         background-color: #112F91;
         border-style: none;
+        font-weight: 100;
+        font-size: large;
         @include perfect-center();
+        margin-top: 20px;
     }
 
 }
@@ -70,10 +73,11 @@
         }
 
         &_buttonInit {
-            width: 160px;
-            height: 60px;
-            font-weight: bold;
-            font-size: xx-large;
+            width: 90px;
+            height: 35px;
+            font-weight: 200;
+            font-size: x-large;
+            margin-top: 20px;
             
         }
     }
