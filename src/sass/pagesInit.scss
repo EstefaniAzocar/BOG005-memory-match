@@ -7,14 +7,13 @@
     @include flex-column-center();
     background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(./img/backgroundYellow.jpg) no-repeat center/cover;
     gap: 20px;
+    background-color: gold;
 
 
     &_container {
         width: 90%;
         height: 750px;
         @include flex-column-center();
-        gap: 30px;
-        background-color: aqua;
     }
 
     &_title {
@@ -58,7 +57,7 @@
     .gameStart{
 
         &_imgTitle{
-            width: 380px;
+            width: 340px;
             height: 90px;
             margin-top: 10px;
             padding: 0;
@@ -86,7 +85,7 @@
 
         &_imgTitle{
             margin-top: 30px;
-            width: 180px;
+            width: 380px;
         }
 
         &_buttonInit {
