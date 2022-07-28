@@ -2,110 +2,85 @@
 
 .gameStart{
     width: 100%;
-    height: 100vh;
+   // height: 100vh;
     padding: 70px 0;
     @include flex-column-center();
-    background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(./img/backgroundYellow.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
     gap: 20px;
-    background-color: gold;
 
 
     &_container {
         width: 90%;
-        height: 750px;
         @include flex-column-center();
+        gap: 60px;
     }
 
     &_title {
-        width: 90%;
+        width: 80%;
+        max-width: 400px;
         @include perfect-center();
     }
 
     &_imgTitle {
+
         @include perfect-center();
     }
 
     &_img {
-        width: 90%;
+        width: 80%;
+        max-width: 700px;
         @include perfect-center();
     }
 
     &_imgInit {
-        width: 300px;
-        height: 380px;
+        width: 100%;
         @include perfect-center();
     }
 
-    &_button {
-        width: 90%;
-        @include perfect-center
+    &_containerButton {
+        width: 50%;
+        @include perfect-center();
     }
 
-    &_buttonInit {
-        width: 80px;
-        height: 30px;
-        border-radius: 20px;
-        background-color: #112F91;
+    &_buttonPlay {
+        width: 100%;
+        max-width: 200px;
+        padding: 30px 40px;
+        border-radius: 50%;
         border-style: none;
-        font-weight: 100;
-        font-size: large;
-        @include perfect-center();
-        margin-top: 20px;
+        background-color: #00A3FF;
+        font-family: "Mochiy Pop One", sans-serif;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+
+        &:hover{
+            background: #1490d8;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
     }
 
 }
 
-@media (min-width: 750px) {
+// @media (min-width: 750px) {
     
-    .gameStart{
+//     .gameStart{
+        
+//         &_imgInit {
+//             max-width: 700px;
+//         }
+//     }
+// }
 
-        &_imgTitle{
-            width: 340px;
-            height: 90px;
-            margin-top: 10px;
-            padding: 0;
-        }
+// @media (min-width: 1024px) {
 
-        &_imgInit {
-            width: 520px;
-            height: 350px;
-            margin-top: 2px;
-        }
+//     .gameStart{
 
-        &_buttonInit {
-            width: 90px;
-            height: 35px;
-            font-weight: 200;
-            font-size: x-large;
-            margin-top: 20px;
-            
-        }
-    }
-}
+//         &_imgInit {
+//             max-width: 750px;
+//         }
 
-@media (min-width: 1024px) {
-
-    .gameStart{
-
-        &_imgTitle{
-            margin-top: 20px;
-            width: 380px;
-        }
-
-        &_imgInit {
-            width: 550px;
-            height: 350px;
-            margin-top: 2px;
-        }
-
-        &_buttonInit {
-            width: 120px;
-            height: 40px;
-            font-weight: 300;
-            font-size: x-large;
-            margin-top: 20px;
-            
-        }
-    
-    }
-}
+//     }
+// }

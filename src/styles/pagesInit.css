@@ -1,23 +1,22 @@
 .gameStart {
   width: 100%;
-  height: 100vh;
   padding: 70px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(./img/backgroundYellow.jpg) no-repeat center/cover;
-  gap: 20px;
-  background-color: gold; }
+  background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+  gap: 20px; }
   .gameStart_container {
     width: 90%;
-    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    gap: 60px; }
   .gameStart_title {
-    width: 90%;
+    width: 80%;
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -26,62 +25,33 @@
     align-items: center;
     justify-content: center; }
   .gameStart_img {
-    width: 90%;
+    width: 80%;
+    max-width: 700px;
     display: flex;
     align-items: center;
     justify-content: center; }
   .gameStart_imgInit {
-    width: 300px;
-    height: 380px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center; }
-  .gameStart_button {
-    width: 90%;
+  .gameStart_containerButton {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center; }
-  .gameStart_buttonInit {
-    width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: #112F91;
+  .gameStart_buttonPlay {
+    width: 100%;
+    max-width: 200px;
+    padding: 30px 40px;
+    border-radius: 50%;
     border-style: none;
-    font-weight: 100;
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px; }
-
-@media (min-width: 750px) {
-  .gameStart_imgTitle {
-    width: 340px;
-    height: 90px;
-    margin-top: 10px;
-    padding: 0; }
-  .gameStart_imgInit {
-    width: 520px;
-    height: 350px;
-    margin-top: 2px; }
-  .gameStart_buttonInit {
-    width: 90px;
-    height: 35px;
-    font-weight: 200;
-    font-size: x-large;
-    margin-top: 20px; } }
-
-@media (min-width: 1024px) {
-  .gameStart_imgTitle {
-    margin-top: 20px;
-    width: 380px; }
-  .gameStart_imgInit {
-    width: 550px;
-    height: 350px;
-    margin-top: 2px; }
-  .gameStart_buttonInit {
-    width: 120px;
-    height: 40px;
-    font-weight: 300;
-    font-size: x-large;
-    margin-top: 20px; } }
+    background-color: #00A3FF;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; }
+    .gameStart_buttonPlay:hover {
+      background: #1490d8;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; }
