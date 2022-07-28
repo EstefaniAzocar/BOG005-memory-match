@@ -84,8 +84,14 @@
     .gameStart{
 
         &_imgTitle{
-            margin-top: 30px;
+            margin-top: 20px;
             width: 380px;
+        }
+
+        &_imgInit {
+            width: 550px;
+            height: 350px;
+            margin-top: 2px;
         }
 
         &_buttonInit {
@@ -93,7 +99,7 @@
             height: 40px;
             font-weight: 300;
             font-size: x-large;
-            margin-bottom: 30px;
+            margin-top: 20px;
             
         }
     
