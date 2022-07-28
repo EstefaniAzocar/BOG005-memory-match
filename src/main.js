@@ -1,9 +1,5 @@
-import App from './components/App.js';
+const playInit = document.querySelector('#button');
 
-document.getElementById('root').appendChild(App());
-
-const button = document.querySelector('button')
-
-button.addEventListener('click', () => {
-    location.href = '../pages/gameTheme.html'
-})
+playInit.addEventListener('click', () => {
+    location.href = './pages/gameTheme.html';
+});
