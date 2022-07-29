@@ -28,6 +28,7 @@
     background: blue; }
   .game_containerCards {
     width: 90%;
+    max-width: 650px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,7 +38,7 @@
     width: 80px;
     height: 80px;
     padding: 15px;
-    background: #FFE837;
+    background: #f9db6c;
     border-radius: 5px; }
   .game_cardBoxImg {
     width: 100%; }

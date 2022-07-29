@@ -12,7 +12,7 @@
 
 .gameStart{
     width: 100%;
-    max-width: 100vh;
+    max-height: 100vh;
     // height: 100vh;
     padding: 70px 0;
     @include flex-column-center();
@@ -43,12 +43,12 @@
 
     &_img {
         width: 80%;
-        max-width: 700px;
         @include perfect-center();
     }
 
     &_imgInit {
         width: 100%;
+        max-width: 450px;
         @include perfect-center();
     }
 
@@ -58,14 +58,14 @@
     }
 
     &_buttonPlay {
-        width: 100%;
-        max-width: 200px;
-        padding: 30px 40px;
+        width: 90%;
+        max-width: 180px;
+        padding: 15px 30px;
         border-radius: 50%;
         border-style: none;
         background-color: #00A3FF;
         font-family: "Mochiy Pop One", sans-serif;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         cursor: pointer;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -79,23 +79,28 @@
 
 }
 
-// @media (min-width: 750px) {
+
+@media (min-width: 750px) {
     
-//     .gameStart{
+    .gameStart{
         
-//         &_imgInit {
-//             max-width: 700px;
-//         }
-//     }
-// }
+        &_buttonPlay {
+            max-width: 200px;
+            padding: 25px 40px;
+            font-size: 24px;
 
-// @media (min-width: 1024px) {
+        }
+    }
+}
 
-//     .gameStart{
+@media (min-width: 1024px) {
 
-//         &_imgInit {
-//             max-width: 750px;
-//         }
-
-//     }
-// }
+    .gameStart{
+        
+        &_buttonPlay {
+            max-height: 330px;
+            font-size: 28px;
+            padding: 30px 40px;
+        }
+    }
+}

@@ -36,6 +36,7 @@
 
     &_containerCards{
         width: 90%;
+        max-width: 650px;
         @include flex-wrap-center();
         gap: 20px;
     }
@@ -44,7 +45,7 @@
         width: 80px;
         height: 80px;
         padding: 15px;
-        background: #FFE837;
+        background: #f9db6c;
         border-radius: 5px;
     }
 
