@@ -1,6 +1,9 @@
+.gameTheme--hidden {
+  display: none; }
+
 .gameTheme {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   padding: 70px 0;
   display: flex;
   flex-direction: column;

@@ -1,10 +1,16 @@
 @import './generics.scss';
 
+.game--hidden{
+    // width: 0px;
+    // max-height: 0px;
+    display: none;
+}
 
 .game{
     width: 100%;
     height: 100vh;
     @include flex-column-center;
+    gap: 40px;
     background: url(../img/backgroundBlue.jpg) no-repeat center/cover;
 
     &_containerCounter{
@@ -30,15 +36,16 @@
 
     &_containerCards{
         width: 90%;
-        height: 60%;
-        background: rgb(225, 201, 121);
         @include flex-wrap-center();
+        gap: 20px;
     }
 
     &_cardBox{
         width: 80px;
         height: 80px;
         padding: 15px;
+        background: #FFE837;
+        border-radius: 5px;
     }
 
     &_cardBoxImg{

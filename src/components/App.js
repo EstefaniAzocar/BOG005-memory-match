@@ -40,20 +40,27 @@ console.log(dataPokemon)
 //   }
 // };
 
-//Proceso de ver las cartas aleatoriamente
-// function fisherShuffle(arr){
+// Proceso de ver las cartas aleatoriamente
+function fisherShuffle(arr){
 
-//   // const cards = dataPokemon
+  console.log(arr)
+  // const cards = dataPokemon
 
-//   for(let i =arr.length-1 ; i>0 ;i--){
-//       let j = Math.floor( Math.random() * (i + 1) ); //random index
-//       [arr[i],arr[j]]=[arr[j],arr[i]]; // swap
-//   }
-// }
+  for(let i =arr.length-1 ; i>0 ;i--){
+      let j = Math.floor( Math.random() * (i + 1) ); //random index
+      [arr[i],arr[j]]=[arr[j],arr[i]]; // swap
 
-// fisherShuffle(dataPokemon)
+      console.log([arr[i],arr[j]])
+  }
 
-// console.log(dataPokemon)
+  //hacer un array vacio que vaya metiendo el push cada aleatoria 
+  //luego retornar ese array
+
+}
+
+fisherShuffle(dataPokemon)
+
+console.log(dataPokemon)
 
 function renderCard(){
    
@@ -68,27 +75,29 @@ function renderCard(){
     cardBox.className = 'game_cardBox'
 
     const contentCard = `
-      <img class='game_cardBoxImg'>${person.image}</img>
+      <img src=${person.image} class='game_cardBoxImg'/>
     `
     cardBox.innerHTML = contentCard
+
     containerCards.appendChild(cardBox)
   })
   
+  return containerCards
 }
 
 
-const App = () => {
+// const App = () => {
   
-  renderCard()
+//   renderCard()
 
-  // const el = document.createElement('div');
+//   // const el = document.createElement('div');
 
-  // el.className = 'App';
-  // el.textContent = 'Hola mundo!';
+//   // el.className = 'App';
+//   // el.textContent = 'Hola mundo!';
 
-  // return el;
-};
+//   // return el;
+// };
 
-export default App;
+export  {renderCard};
 
 

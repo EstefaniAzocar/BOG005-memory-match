@@ -1,6 +1,6 @@
 .gameStart {
   width: 100%;
-  height: 100vh;
+  max-width: 100vh;
   padding: 70px 0;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,8 @@
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
   gap: 20px; }
+  .gameStart--hidden {
+    display: none; }
   .gameStart_container {
     width: 90%;
     display: flex;
