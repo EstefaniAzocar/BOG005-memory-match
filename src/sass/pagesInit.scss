@@ -2,7 +2,11 @@
 
 .gameStart{
     width: 100%;
+<<<<<<< HEAD
     //height: 100vh;
+=======
+    height: 100vh;
+>>>>>>> 586a2571b35c2463551cab16df9f33e337081d68
     padding: 70px 0;
     @include flex-column-center();
     background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
@@ -22,7 +26,7 @@
     }
 
     &_imgTitle {
-
+        width: 100%;
         @include perfect-center();
     }
 

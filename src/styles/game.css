@@ -1,0 +1,41 @@
+.game {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/backgroundBlue.jpg) no-repeat center/cover; }
+  .game_containerCounter {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+  .game_score {
+    width: 40%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .game_containerTimer {
+    width: 40%;
+    background: blue; }
+  .game_containerCards {
+    width: 90%;
+    height: 60%;
+    background: #e1c979; }
+  .game_containerPowers {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; }
+  .game_power {
+    width: 20%;
+    max-width: 80px; }
+  .game_imgAddTime, .game_showAll, .game_showTwo {
+    width: 100%;
+    max-width: 100px; }

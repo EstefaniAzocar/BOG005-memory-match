@@ -42,7 +42,8 @@
     border-radius: 5px;
     cursor: pointer; }
     .gameTheme_card:hover {
-      background: #1a3aa3; }
+      background: #1a3aa3;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; }
   .gameTheme_cardImg {
     width: 60%; }
 

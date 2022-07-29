@@ -1,5 +1,6 @@
 @import url("./pagesInit.css");
 @import url("./pageGameTheme.css");
+@import url("./game.css");
 * {
   box-sizing: border-box;
   padding: 0;
