@@ -2,12 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Memory Match</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <title>GamePage</title>
   </head>
   <body>
-    <div id="root"></div>
-    <button>pagina siguiente</button>
-    <script src="main.js" type="module"></script>
+    <div class='game' id="root">
+
+      <div class="game_containerCounter">
+
+        <div class="game_score">
+          <img src="" alt="estrellas" class="game_scoreimgStar">
+          <div class="game_scoreBox">score</div>
+        </div>
+
+        <div class="game_containerTimer">
+          <div class="game_timer">timer</div>
+        </div>
+
+      </div>
+
+      <div class="game_containerCards">
+
+      </div>
+
+      <div class="game_containerPowers">
+        <div class="game_power game_power--addTime" >
+          <img src="../img/iconTimer.png" alt="" class="game_imgAddTime">
+        </div>
+
+        <div class="game_power game_power--showAll" >
+          <img src="../img/bomba.png" alt="" class="game_showAll">
+        </div>
+
+        <div class="game_power game_power--showTwo" >
+          <img src="../img/dinamita.png" alt="" class="game_showTwo">
+        </div>
+      </div>
+      
+    </div>
+    <script src="../js/game.js" type="module"></script>
   </body>
 </html>

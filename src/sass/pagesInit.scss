@@ -2,7 +2,7 @@
 
 .gameStart{
     width: 100%;
-   // height: 100vh;
+    height: 100vh;
     padding: 70px 0;
     @include flex-column-center();
     background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
@@ -22,7 +22,7 @@
     }
 
     &_imgTitle {
-
+        width: 100%;
         @include perfect-center();
     }
 
