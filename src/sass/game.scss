@@ -32,6 +32,17 @@
         width: 90%;
         height: 60%;
         background: rgb(225, 201, 121);
+        @include flex-wrap-center();
+    }
+
+    &_cardBox{
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+    }
+
+    &_cardBoxImg{
+        width: 100%;
     }
 
     &_containerPowers{

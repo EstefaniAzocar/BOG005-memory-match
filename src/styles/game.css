@@ -25,7 +25,17 @@
   .game_containerCards {
     width: 90%;
     height: 60%;
-    background: #e1c979; }
+    background: #e1c979;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .game_cardBox {
+    width: 80px;
+    height: 80px;
+    padding: 15px; }
+  .game_cardBoxImg {
+    width: 100%; }
   .game_containerPowers {
     width: 90%;
     display: flex;
