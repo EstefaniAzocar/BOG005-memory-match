@@ -1,13 +1,5 @@
 @import './generics.scss';
 
-// .homePage{
-//     width: 100%;
-//     max-height: 100vh;
-
-//     &--hidden{
-//         max-height: 0;
-//     }
-// }
 
 
 .gameStart{
@@ -18,11 +10,6 @@
     @include flex-column-center();
     background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
     gap: 20px;
-
-    &--hidden{
-        display: none;
-    }
-
 
     &_container {
         width: 90%;

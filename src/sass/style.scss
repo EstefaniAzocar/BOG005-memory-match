@@ -9,6 +9,10 @@ body {
     height: 100%;
 }
 
+body > .hidden{
+    display: none;
+}
+
 @import url('./pagesInit.css');
 @import url('./pageGameTheme.css');
 @import url('./game.css');
