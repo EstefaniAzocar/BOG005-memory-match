@@ -1,11 +1,7 @@
 
-import {renderCard} from '../components/App.js';
 import { changePage } from '../helpers.js';
-import { Game, Levels } from '../gameData.js';
 
 export default function CategoriesPage () {
-
-    console.log('execution categoriesPage')
 
     const categoriesContainer = document.querySelector('.gameTheme_container')
 
@@ -33,16 +29,4 @@ export default function CategoriesPage () {
             changePage('game')
         })
     })
-
-    // const gamePage = document.querySelector('#game')
-
-    // marvelTheme.addEventListener('click', toogleGamePage)
-
-    // PokemonTheme.addEventListener('click', toogleGamePage)
-
-    // function toogleGamePage () {
-    //     selectThemePage.classList.remove('gameTheme')
-    //     gamePage.classList.toggle('game')
-    //     document.getElementById('root').appendChild(renderCard());
-    // }
 }

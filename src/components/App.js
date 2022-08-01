@@ -1,74 +1,44 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+// //
+// // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
+// // JavasSript que contenga el `export` correspondiente...
+// //
+// // import pokemon from '../data/pokemon/pokemon.js';
+// // console.log(pokemon);
+// //
+// // O alternativamente podríamos cargar el JSON de forma asíncrona usando
+// // `fetch` en el momento que consideremos necesario.
+// //
+// // fetch('./data/pokemon/pokemon.json')
+// //   .then(resp => resp.json())
+// //   .then(console.log)
+// //   .catch(console.error);
+// //
 
-import pokemon from '../data/pokemon/pokemon.js';
-
-
-
-/* Duplicar las cartas */
-let dataPokemon = pokemon.items;
-console.log(dataPokemon)
-// .concat para duplicar la carta
-dataPokemon = dataPokemon.concat(dataPokemon);
-console.log(dataPokemon)
+import pokemons from '../data/pokemon/pokemon.js';
+import { shuffleData } from '../helpers.js'
+import {Game} from '../gameData.js'
 
 
-// const shuffle = (allCards) => {
-//   //Se declara la función shuffle para barajar las tarjetas usando el algoritmo de Fisher - Yates
-//   let i = allCards.length - 1;
-//   let temp = 0;
-//   let randomIndex = 0;
-//   while (i >= 0) {
-//     randomIndex = Math.floor(Math.random() * (i + 1));
-//     temp = allCards[randomIndex];
-//     allCards[randomIndex] = allCards[i];
-//     allCards[i] = temp;
-//     i--;
-//   }
-// };
+function CardComponent(){
 
-// Proceso de ver las cartas aleatoriamente
-function fisherShuffle(arr){
+  const level = Game.Levels[Game.actuallyLvl]
 
-  console.log(arr)
-  // const cards = dataPokemon
+  const dataLevel = pokemons.items.slice(0, level.cards)
 
-  for(let i =arr.length-1 ; i>0 ;i--){
-      let j = Math.floor( Math.random() * (i + 1) ); //random index
-      [arr[i],arr[j]]=[arr[j],arr[i]]; // swap
+  //creo una copia con el doble de datos
+  const dataPokemon = dataLevel.concat(dataLevel);
 
-      console.log([arr[i],arr[j]])
-  }
+  //envio la copia a barajarse y eso me devuelve una lista lista con los elementos en diferentes posiciones
+  const shuflePokemons = shuffleData(dataPokemon)
 
-  //hacer un array vacio que vaya metiendo el push cada aleatoria 
-  //luego retornar ese array
+  //si es impar push de una nueva carta (poder)
+  // if(level.cards)
 
-}
+  const containerCards = document.createElement('div')
 
-fisherShuffle(dataPokemon)
+  containerCards.className = 'game_containerCards'
 
-console.log(dataPokemon)
-
-function renderCard(){
-   
-  // mixCard()
-
-  const containerCards = document.querySelector('.game_containerCards')
-
-  dataPokemon.forEach((person)=>{
+  shuflePokemons.forEach((person)=>{
     
     // console.log(person.image)
     const cardBox = document.createElement('div')
@@ -79,6 +49,26 @@ function renderCard(){
     `
     cardBox.innerHTML = contentCard
 
+    cardBox.addEventListener('click',()=>{
+
+      //confirmar si true o false
+
+      //si true
+        //si no es el ulitmo par en ser encontrado
+          //quedarse volteada
+
+        //valida si es la ultima carta en ser encontrada
+          //cambiar al siguiente lvl
+          //sumar el puntaje
+            //si es el utimo lvl?
+              //llevar ala pagina de final
+            //no 
+
+      //si false
+        //desvoltearse
+
+    })
+
     containerCards.appendChild(cardBox)
   })
   
@@ -88,16 +78,16 @@ function renderCard(){
 
 // const App = () => {
   
-//   renderCard()
+//   // CardComponent()
 
-//   // const el = document.createElement('div');
+//   const el = document.createElement('div');
 
-//   // el.className = 'App';
-//   // el.textContent = 'Hola mundo!';
+//   el.className = 'App';
+//   el.textContent = 'Hola mundo!';
 
-//   // return el;
+//   return el;
 // };
 
-export  {renderCard};
+export  { CardComponent };
 
-
+// export default App;

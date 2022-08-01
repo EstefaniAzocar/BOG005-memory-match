@@ -1,9 +1,6 @@
 import { changePage } from '../helpers.js'
 
-
 export default function MainPage () {
-
-    console.log('execution mainPage')
 
     const mainContainer = document.querySelector('.gameStart_container')
 
