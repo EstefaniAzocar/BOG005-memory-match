@@ -35,12 +35,13 @@
     &_containerCards{
         width: 90%;
         max-width: 650px;
-        @include flex-wrap-center();
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
-        // perspective: 1000px;
-        position: relative;
-        transform-style: preserve-3d;
-        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        box-sizing: border-box;
     }
 
     // &_containerCards, &_cardBox:hover{
@@ -48,19 +49,13 @@
     // }
 
     &_cardBox{ 
-        // position: relative;
-        // width: 80px;
-        // height: 80px;
-        // text-align: center;
-        // transition: transform 0.6s;
-        // transform-style: preserve-3d;
-        // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
         width: 100%;
-        cursor: pointer; 
-        // width: 10rem;
-        // height: 12rem;
-        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        transform-style: preserve-3d;
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     // &_cardBack, &_cardFront{
@@ -73,22 +68,24 @@
 
     &_cardBack{
         position: absolute;
+        cursor: pointer;
         width: 80px;
         height: 80px;
         padding: 20px 0;
         background: #e2e1de;
         border-radius: 5px;
-        @include flex-column-center;
-        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         pointer-events: none;
         align-content: center;
+        transform: rotateY(180deg);
     }
     
     
     
     &_cardFront{
-        // transform: rotateY(180deg)
-        
         position: absolute;
         width: 80px;
         height: 80px;
@@ -127,3 +124,7 @@
         max-width: 100px;
     }
 }
+
+.toggleCard {
+    transform: rotateY(180deg);
+  }
