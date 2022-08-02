@@ -91,15 +91,20 @@
 
     &_front {
         pointer-events: none;
-        background-color: black;
+        background-color: #FFF975;
         border-radius: 10px;
         align-content: center;
         backface-visibility: hidden;
+        padding: 10px;
+
+        & img {
+
+        }
       }
       
     &_back {
         pointer-events: none;
-        background-color: aliceblue;
+        background-color: ##fffee1;
         border-radius: 10px;
         align-content: center;
         transform: rotateY(180deg);

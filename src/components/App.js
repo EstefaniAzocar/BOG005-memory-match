@@ -48,8 +48,7 @@ function CardComponent(){
           <img src="${person.image}"/>
         </div>
         <div class='gameCard_front'>
-          <svg width="100" height="120" viewBox="0 0 173 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-          </svg>
+          <img src="../img/logoPokemon.png"/>  
         </div>
     `
     

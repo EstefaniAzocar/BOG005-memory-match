@@ -71,10 +71,11 @@
     height: 100%; }
   .gameCard_front {
     pointer-events: none;
-    background-color: black;
+    background-color: #FFF975;
     border-radius: 10px;
     align-content: center;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    padding: 10px; }
   .gameCard_back {
     pointer-events: none;
     background-color: aliceblue;
