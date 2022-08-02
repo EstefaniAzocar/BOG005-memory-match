@@ -1,28 +1,14 @@
 @import './generics.scss';
 
-// .homePage{
-//     width: 100%;
-//     max-height: 100vh;
-
-//     &--hidden{
-//         max-height: 0;
-//     }
-// }
 
 
 .gameStart{
     width: 100%;
-    max-height: 100vh;
-    // height: 100vh;
+    min-height: 100vh;
     padding: 70px 0;
     @include flex-column-center();
     background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
     gap: 20px;
-
-    &--hidden{
-        display: none;
-    }
-
 
     &_container {
         width: 90%;
@@ -42,13 +28,14 @@
     }
 
     &_img {
-        width: 80%;
+        height: 40vh;
+        min-height: 250px;
+        max-height: 500px;
         @include perfect-center();
     }
 
     &_imgInit {
-        width: 100%;
-        max-width: 450px;
+        height: 100%;
         @include perfect-center();
     }
 
