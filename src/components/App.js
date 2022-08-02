@@ -44,20 +44,13 @@ function CardComponent(){
     const cardBox = document.createElement('div')
     cardBox.className = 'game_cardBox ${data.items[i].id}'
 
-    const contentCard = `
-<<<<<<< HEAD
-      <img src=${person.image} class='game_cardBoxImg'/>
-
-      <div class="game_containerCards"> img</div>
-      
-=======
+    const contentCard = `    
       <div class="game_cardBack">
         <img src=${person.image} class='game_cardBoxImg'/>
       </div>
       <div class="game_cardFront">
         <img src="../img/logoPokemon.png" class='game_cardFrontImg'/>
       </div>
->>>>>>> e2472ca2e345b0794faea9f2490aa6116c8d20e3
     `
    
     cardBox.innerHTML = contentCard
@@ -132,11 +125,7 @@ function toogleCard () {
 //   return el;
 // };
 
-<<<<<<< HEAD
-export {renderCard};
 
-=======
 export  { CardComponent };
->>>>>>> e2472ca2e345b0794faea9f2490aa6116c8d20e3
 
 // export default App;
