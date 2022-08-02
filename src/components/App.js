@@ -58,6 +58,8 @@ function CardComponent(){
 
       cardBox.classList.toggle('toggleCard')
 
+      checkCards(e);
+
       //evaluado -> ?
 
       //confirmar si true o false
@@ -93,26 +95,37 @@ function CardComponent(){
 
 //enccontradas ?
 
-// let totalMatch = 0;
+let totalMatch = 0;
+const checkCards = (e) => {
+  //  console.log(person)
+  const clickedCard = e.target;
+  // console.log(clickedCard);
+  clickedCard.classList.add('uncoveredCard');
 
-// const checkCards = (e) => {
-//   const clickedCard = e.target;
-//   console.log(clickedCard);
-//   clickedCard.classList.add('flipped');
+  //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
+  const flippedCards = document.querySelectorAll('.uncoveredCard');
+  // console.log(flippedCards)
+  if(flippedCards.length === 2){
+    if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
+      flippedCards.forEach(item => {
+        item.classList.remove('uncoveredCard');
+        item.style.pointerEvents = 'none';
+      })
+    totalMatch++;
+    if (totalMatch === 1) {
+      setTimeout(1000)
+    }}
+    else {
+      console.log('wrong');
+      flippedCards.forEach(item => {
+        item.classList.remove('uncoveredCard');
+        setTimeout(() => 
+        item.classList.remove('toggleCard'),1400);
+      });
 
-//   //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
-//   const flippedCards = document.querySelectorAll('.flipped');
-//   if(flippedCards.length === 2){
-//     if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
-//       console.log('match');
-//       flippedCards.forEach(item => {
-//         item.style.pointerEvents = 'none';
-//       })
-    
-     
-//     }
-
-//   }
-// }
-
+    }
+  }
+  console.log(totalMatch)
+}
+  
 export  { CardComponent };
