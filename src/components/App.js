@@ -64,6 +64,7 @@ function CardComponent(){
 
     cardBox.addEventListener('click',()=>{
 
+      cardBox.classList.toogle('toogleCard')
       //confirmar si true o false
 
       //si true
@@ -83,6 +84,18 @@ function CardComponent(){
     })
 
     containerCards.appendChild(cardBox)
+
+  })
+
+containerCards.querySelectorAll('.game_cardBox').forEach((card)=>{
+    
+    card.addEventListener('click', () => {
+      console.log('click')
+    })
+    // card.addEventListener('click', () => {
+    //   console.log('click en tarjeta')
+    //   // card.classList.toggle('.toggleCard')
+    // })
   })
   
   return containerCards
@@ -99,6 +112,13 @@ document.querySelectorAll('.game_containerCard').forEach(item => {
   })
 })
 
+
+/* toogleCard()
+function toogleCard () {
+
+  const allCards = document.querySelectorAll('.game_cardBox')
+  console.log(allCards)
+} */
 
 // const App = () => {
   

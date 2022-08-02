@@ -31,20 +31,24 @@
   .game_containerCards {
     width: 90%;
     max-width: 650px;
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    box-sizing: border-box; }
   .game_cardBox {
     width: 100%;
+    position: relative;
     cursor: pointer;
-    border-radius: 15px; }
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .game_cardBack {
     position: absolute;
+    cursor: pointer;
     width: 80px;
     height: 80px;
     padding: 20px 0;
@@ -54,9 +58,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     pointer-events: none;
-    align-content: center; }
+    align-content: center;
+    transform: rotateY(180deg); }
   .game_cardFront {
     position: absolute;
     width: 80px;
@@ -85,3 +89,6 @@
   .game_imgAddTime, .game_showAll, .game_showTwo {
     width: 100%;
     max-width: 100px; }
+
+.toggleCard {
+  transform: rotateY(180deg); }
