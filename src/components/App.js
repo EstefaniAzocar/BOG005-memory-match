@@ -72,11 +72,15 @@ function renderCard(){
     
     // console.log(person.image)
     const cardBox = document.createElement('div')
-    cardBox.className = 'game_cardBox'
+    cardBox.className = 'game_cardBox ${data.items[i].id}'
 
     const contentCard = `
       <img src=${person.image} class='game_cardBoxImg'/>
+
+      <div class="game_containerCards"> img</div>
+      
     `
+   
     cardBox.innerHTML = contentCard
 
     containerCards.appendChild(cardBox)
@@ -84,6 +88,17 @@ function renderCard(){
   
   return containerCards
 }
+  //Usamos selector para todas las tarjetas que tienen la clase "containerCard"
+//usamos un loop for each, recordando que son varios 'containeCard'
+document.querySelectorAll('.game_containerCard').forEach(item => { 
+  //para cada item(carta), al hacer click sucede un evento
+  item.addEventListener('click', () => {
+    //al hacer click la carta tiene una clase de 'toggle card': efecto para voltear
+    item.classList.toggle('game_toggleCard');
+
+   
+  })
+})
 
 
 // const App = () => {
@@ -98,6 +113,6 @@ function renderCard(){
 //   // return el;
 // };
 
-export  {renderCard};
+export {renderCard};
 
 
