@@ -51,8 +51,12 @@ function shuffleData(data){
     return pokemons
   }
 
+
+
   
 export {
     changePage,
     shuffleData
 }
+
+

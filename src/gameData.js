@@ -19,7 +19,7 @@ const powers = [
 
 
 const Game = {
-    userName: "juan",
+    // userName: "juan",
     score: 0,
     actuallyLvl: 1,
     Levels: [...Levels],

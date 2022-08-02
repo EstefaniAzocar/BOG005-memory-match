@@ -45,7 +45,12 @@ function CardComponent(){
     cardBox.className = 'game_cardBox'
 
     const contentCard = `
-      <img src=${person.image} class='game_cardBoxImg'/>
+      <div class="game_cardBack">
+        <img src=${person.image} class='game_cardBoxImg'/>
+      </div>
+      <div class="game_cardFront">
+        <img src="../img/logoPokemon.png" class='game_cardFrontImg'/>
+      </div>
     `
     cardBox.innerHTML = contentCard
 
