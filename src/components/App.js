@@ -40,24 +40,27 @@ function CardComponent(){
 
   shuflePokemons.forEach((person)=>{
     
-    // console.log(person.image)
     const cardBox = document.createElement('div')
-    cardBox.className = 'game_cardBox ${data.items[i].id}'
+    cardBox.className = 'gameCard'
 
-    const contentCard = `    
-      <div class="game_cardBack">
-        <img src=${person.image} class='game_cardBoxImg'/>
-      </div>
-      <div class="game_cardFront">
-        <img src="../img/logoPokemon.png" class='game_cardFrontImg'/>
-      </div>
+    const contentCard = `
+        <div class= 'gameCard_back'>
+          <img src="${person.image}"/>
+        </div>
+        <div class='gameCard_front'>
+          <svg width="100" height="120" viewBox="0 0 173 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </svg>
+        </div>
     `
-   
+    
     cardBox.innerHTML = contentCard
 
-    cardBox.addEventListener('click',()=>{
+    cardBox.addEventListener('click',(e)=>{
 
-      cardBox.classList.toogle('toogleCard')
+      cardBox.classList.toggle('toggleCard')
+
+      //evaluado -> ?
+
       //confirmar si true o false
 
       //si true
@@ -80,52 +83,37 @@ function CardComponent(){
 
   })
 
-containerCards.querySelectorAll('.game_cardBox').forEach((card)=>{
-    
-    card.addEventListener('click', () => {
-      console.log('click')
-    })
-    // card.addEventListener('click', () => {
-    //   console.log('click en tarjeta')
-    //   // card.classList.toggle('.toggleCard')
-    // })
-  })
-  
+
   return containerCards
 }
-  //Usamos selector para todas las tarjetas que tienen la clase "containerCard"
-//usamos un loop for each, recordando que son varios 'containeCard'
-document.querySelectorAll('.game_containerCard').forEach(item => { 
-  //para cada item(carta), al hacer click sucede un evento
-  item.addEventListener('click', () => {
-    //al hacer click la carta tiene una clase de 'toggle card': efecto para voltear
-    item.classList.toggle('game_toggleCard');
 
-   
-  })
-})
+//una clase unica para las que estan siendo evaluadas -> 2 elementos clase
+//toggle card -> voltearla 
+// 1 2
+// 0 1 
 
+//enccontradas ?
 
-/* toogleCard()
-function toogleCard () {
+// let totalMatch = 0;
 
-  const allCards = document.querySelectorAll('.game_cardBox')
-  console.log(allCards)
-} */
+// const checkCards = (e) => {
+//   const clickedCard = e.target;
+//   console.log(clickedCard);
+//   clickedCard.classList.add('flipped');
 
-// const App = () => {
-  
-//   // CardComponent()
+//   //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
+//   const flippedCards = document.querySelectorAll('.flipped');
+//   if(flippedCards.length === 2){
+//     if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
+//       console.log('match');
+//       flippedCards.forEach(item => {
+//         item.style.pointerEvents = 'none';
+//       })
+    
+     
+//     }
 
-//   const el = document.createElement('div');
-
-//   el.className = 'App';
-//   el.textContent = 'Hola mundo!';
-
-//   return el;
-// };
-
+//   }
+// }
 
 export  { CardComponent };
-
-// export default App;

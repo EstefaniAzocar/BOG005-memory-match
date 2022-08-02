@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .game {
   width: 100%;
   height: 100vh;
@@ -11,7 +12,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px; }
+    gap: 20px; }
+  .game_containerCards {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    /*Cuando agregemos un width a un elemento y luego se añada un padding, no modifique el tamaño del elemento */ }
   .game_containerCounter {
     width: 90%;
     display: flex;
@@ -28,54 +38,6 @@
   .game_containerTimer {
     width: 40%;
     background: blue; }
-  .game_containerCards {
-    width: 90%;
-    max-width: 650px;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    box-sizing: border-box; }
-  .game_cardBox {
-    width: 100%;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    transform-style: preserve-3d;
-    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-  .game_cardBack {
-    position: absolute;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    padding: 20px 0;
-    background: #e2e1de;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    align-content: center;
-    transform: rotateY(180deg); }
-  .game_cardFront {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    padding: 15px;
-    background: #f9db6c;
-    border-radius: 5px;
-    cursor: pointer;
-    pointer-events: none;
-    align-content: center;
-    backface-visibility: hidden; }
-  .game_cardBoxImg {
-    width: 100%; }
-  .game_cardFrontImg {
-    width: 100%; }
   .game_containerPowers {
     width: 90%;
     display: flex;
@@ -90,5 +52,39 @@
     width: 100%;
     max-width: 100px; }
 
-.toggleCard {
-  transform: rotateY(180deg); }
+.gameCard {
+  position: relative;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .gameCard img {
+    object-fit: contain;
+    height: 100%; }
+  .gameCard_front, .gameCard_back {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    padding: 5px;
+    height: 100%; }
+  .gameCard_front {
+    pointer-events: none;
+    background-color: black;
+    border-radius: 10px;
+    align-content: center;
+    backface-visibility: hidden; }
+  .gameCard_back {
+    pointer-events: none;
+    background-color: aliceblue;
+    border-radius: 10px;
+    align-content: center;
+    transform: rotateY(180deg); }
+  .gameCard.toggleCard {
+    transform: rotateY(180deg); }
+
+@media (min-width: 750px) {
+  .gameCard {
+    height: 100px;
+    width: 100px; } }
