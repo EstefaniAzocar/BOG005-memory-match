@@ -57,12 +57,7 @@ function CardComponent(){
 
     
     cardBox.addEventListener('click',(e)=>{
-      
-      // console.log(person)
-      cardBox.classList.toggle('toggleCard')
-
-      // checkoutCards(person)
-      
+         
       checkCards(e);
       
       //evaluado -> ?
@@ -96,111 +91,62 @@ function CardComponent(){
 
 
 
-//una clase unica para las que estan siendo evaluadas -> 2 elementos clase
-//toggle card -> voltearla 
-// 1 2
-// 0 1 
-
-//enccontradas ?
-
-let totalMatch = 0;
 
 const checkCards = (event) => {
 
-   console.log(event)
 
-  // const clickedCard = event.target.children[0].id
-  const clickedCard = event.target.children[0].id
-  // const idClickedCard = clickedCard.chi.children[0].idldren[0].id;
-  // console.log(clickedCard);
 
-  // clickedCard.classList.add('uncoveredCard');
-  // console.log(clickedCard)
+  const clickedCard = event.target
+  clickedCard.classList.toggle('toggleCard')
+  clickedCard.classList.add('uncoveredCard')
 
   //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
-  // const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
-  const listUncoveredCard = document.querySelectorAll('.toggleCard');
-
-  console.log(listUncoveredCard)
-
-  // const personCard1 = listUncoveredCard[0].personCard
-  // console.log(personCard1)
-  
-  // listUncoveredCard.forEach(()=>{
-
-  // })
+  const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
 
 
+  if(listUncoveredCard.length == 2) {
 
-  if(listUncoveredCard.length === 2) {
+    console.log('segunda apertura')
 
     const showCard1 = listUncoveredCard[0].children[0].id
     const showCard2 = listUncoveredCard[1].children[0].id
-    
+
+     console.log({
+      showCard1,showCard2
+     })
+
     if(showCard1 === showCard2){
 
-      // console.log('son iguales')
+      console.log('son iguales',listUncoveredCard)
       
       listUncoveredCard.forEach(item => {
         
-        item.classList.remove('.toggleCard');
+        item.classList.remove('uncoveredCard');
        
         item.style.pointerEvents = 'none';
       })
     
-      totalMatch++;
-    
-      if (totalMatch === 1) {
-      
-        setTimeout(1000)
-    }}
-
-    else {
-
+        
+      } else {
+        
+        
       console.log('wrong');
 
       listUncoveredCard.forEach(item => {
        
-        item.classList.remove('toggleCard');
+        item.classList.remove('uncoveredCard');
        
         setTimeout(() => 
-       
-        item.classList.remove('toggleCard'),1400);
+            item.classList.remove('toggleCard')
+        ,600);
 
       });
 
     }
     // console.log('no son iguales')
 
-  }
-  console.log(totalMatch)
+  } 
 }
-
-
-
-
-
-/*.............. aproximacion paula ................... */
-
-// function checkoutCards (personCard) {
-
-//   const showCards = document.querySelectorAll('.toggleCard')
-//   //  console.log(showCards)
-
-
-//    showCards.forEach(()=>{
-//     console.log(personCard)
-//    })
-
-
-//    if(showCards.length === 2){
-//     console.log(showCards)
-
-//     console.log('valide')
-//   }
-
-// }
-
 
 
 
