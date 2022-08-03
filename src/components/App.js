@@ -42,9 +42,10 @@ function CardComponent(){
     
     const cardBox = document.createElement('div')
     cardBox.className = 'gameCard'
+    
 
     const contentCard = `
-        <div class= 'gameCard_back'>
+        <div class= 'gameCard_back' id='${person.id}'>
           <img src="${person.image}"/>
         </div>
         <div class='gameCard_front'>
@@ -54,39 +55,46 @@ function CardComponent(){
     
     cardBox.innerHTML = contentCard
 
+    
     cardBox.addEventListener('click',(e)=>{
-
+      
+      // console.log(person)
       cardBox.classList.toggle('toggleCard')
 
+      // checkoutCards(person)
+      
       checkCards(e);
-
+      
       //evaluado -> ?
-
+      
       //confirmar si true o false
-
+      
       //si true
-        //si no es el ulitmo par en ser encontrado
-          //quedarse volteada
-
-        //valida si es la ultima carta en ser encontrada
-          //cambiar al siguiente lvl
-          //sumar el puntaje
-            //si es el utimo lvl?
-              //llevar ala pagina de final
-            //no 
-
+      //si no es el ulitmo par en ser encontrado
+      //quedarse volteada
+      
+      //valida si es la ultima carta en ser encontrada
+      //cambiar al siguiente lvl
+      //sumar el puntaje
+      //si es el utimo lvl?
+      //llevar ala pagina de final
+      //no 
+      
       //si false
-        //desvoltearse
-
+      //desvoltearse
+      
     })
-
+    
     containerCards.appendChild(cardBox)
 
+    
   })
 
 
   return containerCards
 }
+
+
 
 //una clase unica para las que estan siendo evaluadas -> 2 elementos clase
 //toggle card -> voltearla 
@@ -96,36 +104,105 @@ function CardComponent(){
 //enccontradas ?
 
 let totalMatch = 0;
-const checkCards = (e) => {
-  //  console.log(person)
-  const clickedCard = e.target;
+
+const checkCards = (event) => {
+
+   console.log(event)
+
+  // const clickedCard = event.target.children[0].id
+  const clickedCard = event.target.children[0].id
+  // const idClickedCard = clickedCard.chi.children[0].idldren[0].id;
   // console.log(clickedCard);
-  clickedCard.classList.add('uncoveredCard');
+
+  // clickedCard.classList.add('uncoveredCard');
+  // console.log(clickedCard)
 
   //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
-  const flippedCards = document.querySelectorAll('.uncoveredCard');
-  // console.log(flippedCards)
-  if(flippedCards.length === 2){
-    if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
-      flippedCards.forEach(item => {
-        item.classList.remove('uncoveredCard');
+  // const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
+  const listUncoveredCard = document.querySelectorAll('.toggleCard');
+
+  console.log(listUncoveredCard)
+
+  // const personCard1 = listUncoveredCard[0].personCard
+  // console.log(personCard1)
+  
+  // listUncoveredCard.forEach(()=>{
+
+  // })
+
+
+
+  if(listUncoveredCard.length === 2) {
+
+    const showCard1 = listUncoveredCard[0].children[0].id
+    const showCard2 = listUncoveredCard[1].children[0].id
+    
+    if(showCard1 === showCard2){
+
+      // console.log('son iguales')
+      
+      listUncoveredCard.forEach(item => {
+        
+        item.classList.remove('.toggleCard');
+       
         item.style.pointerEvents = 'none';
       })
-    totalMatch++;
-    if (totalMatch === 1) {
-      setTimeout(1000)
+    
+      totalMatch++;
+    
+      if (totalMatch === 1) {
+      
+        setTimeout(1000)
     }}
+
     else {
+
       console.log('wrong');
-      flippedCards.forEach(item => {
-        item.classList.remove('uncoveredCard');
+
+      listUncoveredCard.forEach(item => {
+       
+        item.classList.remove('toggleCard');
+       
         setTimeout(() => 
+       
         item.classList.remove('toggleCard'),1400);
+
       });
 
     }
+    // console.log('no son iguales')
+
   }
   console.log(totalMatch)
 }
-  
+
+
+
+
+
+/*.............. aproximacion paula ................... */
+
+// function checkoutCards (personCard) {
+
+//   const showCards = document.querySelectorAll('.toggleCard')
+//   //  console.log(showCards)
+
+
+//    showCards.forEach(()=>{
+//     console.log(personCard)
+//    })
+
+
+//    if(showCards.length === 2){
+//     console.log(showCards)
+
+//     console.log('valide')
+//   }
+
+// }
+
+
+
+
 export  { CardComponent };
+

@@ -78,7 +78,7 @@
     padding: 10px; }
   .gameCard_back {
     pointer-events: none;
-    background-color: aliceblue;
+    background-color: #fffee1;
     border-radius: 10px;
     align-content: center;
     transform: rotateY(180deg); }
