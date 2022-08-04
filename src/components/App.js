@@ -22,16 +22,21 @@ import {Game} from '../gameData.js'
 let levelNow = Game.actuallyLvl //0
 console.log('inicial' , levelNow)
 
-/* function renderGame (level) {
+function renderGame (nivel) {
 
-  nextLevel(level)
+  levelNow = nivel
+  console.log('nievel renderGame',levelNow)
+  CardComponent()
+  
+  // return CardComponent()
+  // nextLevel(level)
   //actualizar el nivel que siempre va a iniciasr en 0 
 
 
   //volver a renderizar las tarjetas con el nivel actualizado
-  cardComponent()
+  // cardComponent()
 
-} */
+}
 
 function CardComponent(){
 
@@ -41,19 +46,24 @@ function CardComponent(){
   // const nextLevel = levelNow
   // console.log(nextLevel)
 
-  const level = Game.Levels[levelNow] //Game.Levels[levelNow]
+  const level = Game.Levels[levelNow] 
+  console.log(level)
 
   const dataLevel = pokemons.items.slice(0, level.cards)
 
   //creo una copia con el doble de datos
   const dataPokemon = dataLevel.concat(dataLevel);
-
-  //envio la copia a barajarse y eso me devuelve una lista lista con los elementos en diferentes posiciones
-  const shuflePokemons = shuffleData(dataPokemon)
-  const quantityCardsLvl = shuflePokemons.length
+  const quantityCardsLvl =  dataPokemon.length
   console.log({
     largo: quantityCardsLvl,
   })
+
+  //envio la copia a barajarse y eso me devuelve una lista lista con los elementos en diferentes posiciones
+  const shuflePokemons = shuffleData(dataPokemon)
+  // const quantityCardsLvl = shuflePokemons.length
+  // console.log({
+  //   largo: quantityCardsLvl,
+  // })
   // comparar con este para pasar de nivel 
 
   //si es impar push de una nueva carta (poder)
@@ -86,6 +96,7 @@ function CardComponent(){
       // cardBox.classList.toggle('toggleCard')
 
       checkCards(e, quantityCardsLvl);
+      // nextLevel(levelNow)
       //evaluado -> ?
 
       //confirmar si true o false
@@ -111,14 +122,11 @@ function CardComponent(){
 
   })
 
-  const arrayShowCards = document.querySelectorAll('.toggleCard')
-  console.log(arrayShowCards)
+  // const arrayShowCards = document.querySelectorAll('.toggleCard')
+  // console.log(arrayShowCards)
 
   return containerCards
 }
-
-
-
 
 const checkCards = (event, cardsLvl) => {
 
@@ -187,24 +195,27 @@ const checkCards = (event, cardsLvl) => {
 
   if(quantityShowCards == cardsLvl) {
     nextLevel(levelNow)
-    console.log('se abrierontodas las cartas del nivel actual')
+    // console.log('se abrierontodas las cartas del nivel actual')
   } else {
-    console.log('faltan descubrir cartas')
+    // console.log('faltan descubrir cartas')
   }
 }
 
 
 function nextLevel (lvl) {
   
-  console.log(lvl)
+  console.log('levelBefore',lvl)
 
   lvl = lvl + 1 
   // lvl = lvl + 1
-  console.log(lvl)
-  return lvl
+  console.log('levelAfter',lvl)
+  // return lvl
+
+  renderGame(lvl)
 
 }
 
 
 export  { CardComponent };
+// export  { renderGame };
 

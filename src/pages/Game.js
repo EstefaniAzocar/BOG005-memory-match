@@ -1,4 +1,5 @@
 import { CardComponent } from "../components/App.js"
+// import { renderGame } from "../components/App.js"
 // import {Game} from '../gameData.js'
 
 export default function GamePage () {
@@ -11,6 +12,8 @@ export default function GamePage () {
 
     const cards = CardComponent()
     gameContainer.appendChild(cards)
+    // const cards = renderGame()
+    // gameContainer.appendChild(cards)
 
 
     const powers = PowersComponent()
