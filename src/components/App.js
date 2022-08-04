@@ -19,9 +19,29 @@ import { shuffleData } from '../helpers.js'
 import {Game} from '../gameData.js'
 
 
+let levelNow = Game.actuallyLvl //0
+console.log('inicial' , levelNow)
+
+/* function renderGame (level) {
+
+  nextLevel(level)
+  //actualizar el nivel que siempre va a iniciasr en 0 
+
+
+  //volver a renderizar las tarjetas con el nivel actualizado
+  cardComponent()
+
+} */
+
 function CardComponent(){
 
-  const level = Game.Levels[Game.actuallyLvl]
+  // levelNow = nextLevel()
+  // console.log(levelNow)
+
+  // const nextLevel = levelNow
+  // console.log(nextLevel)
+
+  const level = Game.Levels[levelNow] //Game.Levels[levelNow]
 
   const dataLevel = pokemons.items.slice(0, level.cards)
 
@@ -30,6 +50,11 @@ function CardComponent(){
 
   //envio la copia a barajarse y eso me devuelve una lista lista con los elementos en diferentes posiciones
   const shuflePokemons = shuffleData(dataPokemon)
+  const quantityCardsLvl = shuflePokemons.length
+  console.log({
+    largo: quantityCardsLvl,
+  })
+  // comparar con este para pasar de nivel 
 
   //si es impar push de una nueva carta (poder)
   // if(level.cards)
@@ -39,52 +64,55 @@ function CardComponent(){
   containerCards.className = 'game_containerCards'
 
   shuflePokemons.forEach((person)=>{
-    
+
     const cardBox = document.createElement('div')
     cardBox.className = 'gameCard'
-    
+
 
     const contentCard = `
         <div class= 'gameCard_back' id='${person.id}'>
           <img src="${person.image}"/>
         </div>
         <div class='gameCard_front'>
-          <img src="../img/logoPokemon.png"/>  
+          <img src="../img/logoPokemon.png"/>
         </div>
     `
-    
+
     cardBox.innerHTML = contentCard
 
-    
+
     cardBox.addEventListener('click',(e)=>{
-         
-      checkCards(e);
-      
+
+      // cardBox.classList.toggle('toggleCard')
+
+      checkCards(e, quantityCardsLvl);
       //evaluado -> ?
-      
+
       //confirmar si true o false
-      
+
       //si true
       //si no es el ulitmo par en ser encontrado
       //quedarse volteada
-      
+
       //valida si es la ultima carta en ser encontrada
       //cambiar al siguiente lvl
       //sumar el puntaje
       //si es el utimo lvl?
       //llevar ala pagina de final
-      //no 
-      
+      //no
+
       //si false
       //desvoltearse
-      
+
     })
-    
+
     containerCards.appendChild(cardBox)
 
-    
+
   })
 
+  const arrayShowCards = document.querySelectorAll('.toggleCard')
+  console.log(arrayShowCards)
 
   return containerCards
 }
@@ -92,9 +120,9 @@ function CardComponent(){
 
 
 
-const checkCards = (event) => {
+const checkCards = (event, cardsLvl) => {
 
-
+  // const arrayShowCards = []
 
   const clickedCard = event.target
   clickedCard.classList.toggle('toggleCard')
@@ -102,41 +130,45 @@ const checkCards = (event) => {
 
   //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
   const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
+  // console.log(listUncoveredCard)
 
 
   if(listUncoveredCard.length == 2) {
 
-    console.log('segunda apertura')
+    // console.log('segunda apertura')
 
     const showCard1 = listUncoveredCard[0].children[0].id
+
     const showCard2 = listUncoveredCard[1].children[0].id
 
-     console.log({
-      showCard1,showCard2
-     })
+    //  console.log({
+    //   showCard1,showCard2
+    //  })
 
     if(showCard1 === showCard2){
 
-      console.log('son iguales',listUncoveredCard)
-      
-      listUncoveredCard.forEach(item => {
-        
-        item.classList.remove('uncoveredCard');
-       
-        item.style.pointerEvents = 'none';
-      })
-    
-        
-      } else {
-        
-        
-      console.log('wrong');
+      // console.log('son iguales',listUncoveredCard)
 
       listUncoveredCard.forEach(item => {
-       
+
         item.classList.remove('uncoveredCard');
-       
-        setTimeout(() => 
+
+        item.style.pointerEvents = 'none';
+
+        // arrayShowCards.push(item)
+      })
+
+
+      } else {
+
+
+      // console.log('wrong');
+
+      listUncoveredCard.forEach(item => {
+
+        item.classList.remove('uncoveredCard');
+
+        setTimeout(() =>
             item.classList.remove('toggleCard')
         ,600);
 
@@ -145,9 +177,33 @@ const checkCards = (event) => {
     }
     // console.log('no son iguales')
 
-  } 
+  }
+
+  const arrayShowCards = document.querySelectorAll('.toggleCard')
+  const quantityShowCards = arrayShowCards.length
+  console.log({
+    largoMostradas: quantityShowCards,
+  })
+
+  if(quantityShowCards == cardsLvl) {
+    nextLevel(levelNow)
+    console.log('se abrierontodas las cartas del nivel actual')
+  } else {
+    console.log('faltan descubrir cartas')
+  }
 }
 
+
+function nextLevel (lvl) {
+  
+  console.log(lvl)
+
+  lvl = lvl + 1 
+  // lvl = lvl + 1
+  console.log(lvl)
+  return lvl
+
+}
 
 
 export  { CardComponent };

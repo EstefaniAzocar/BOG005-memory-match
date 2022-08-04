@@ -6,6 +6,10 @@ const Levels = [
     {
         name: "nivel 2",
         cards: 3,
+    },
+    {
+        name: "nivel ultimo",
+        cards: 9,
     }
 ]
 
@@ -21,7 +25,7 @@ const powers = [
 const Game = {
     // userName: "juan",
     score: 0,
-    actuallyLvl: 1,
+    actuallyLvl: 0,
     Levels: [...Levels],
     timer: 0,
     powers: [...powers]
