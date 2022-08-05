@@ -35,7 +35,7 @@ function CounterComponent () {
         </div>
 
         <div class="game_containerTimer">
-            <div class="game_timer">timer</div>
+            <div class="game_timer">0:30</div>
         </div>
     `
 

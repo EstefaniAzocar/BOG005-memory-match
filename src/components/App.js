@@ -195,9 +195,9 @@ const checkCards = (event, cardsLvl) => {
 
   if(quantityShowCards == cardsLvl) {
     nextLevel(levelNow)
-    // console.log('se abrierontodas las cartas del nivel actual')
+    console.log('se abrierontodas las cartas del nivel actual')
   } else {
-    // console.log('faltan descubrir cartas')
+    console.log('faltan descubrir cartas')
   }
 }
 
