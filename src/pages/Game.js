@@ -1,19 +1,23 @@
-import { CardComponent } from "../components/App.js"
+import { CardsContainerComponent } from "../components/App.js"
+import { getActuallyLevel } from "../helpers.js"
 // import { renderGame } from "../components/App.js"
 // import {Game} from '../gameData.js'
 
+
+//RENDERIZAR TOOOOOODOOO EL GAME
 export default function GamePage () {
 
     const gameContainer = document.querySelector('.game_container')
+    gameContainer.innerHTML = ``
 
+
+    //COUNTER COMPONENT
     const containerCounter = CounterComponent()
     gameContainer.appendChild(containerCounter)
 
 
-    const cards = CardComponent()
+    const cards = CardsContainerComponent()
     gameContainer.appendChild(cards)
-    // const cards = renderGame()
-    // gameContainer.appendChild(cards)
 
 
     const powers = PowersComponent()

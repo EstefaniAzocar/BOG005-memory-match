@@ -1,9 +1,15 @@
 import CategoriesPage from "./pages/CategoriesPage.js"
 import GamePage from "./pages/Game.js"
+import { Levels, Game } from "./gameData.js"
+import pokemons from './data/pokemon/pokemon.js'
+import GameEndPage from "./pages/GameEndPage.js"
+import GameStartPage from "./pages/GameStart.js"
 
 const dictionaryPages = {
     gameTheme : CategoriesPage,
     game: GamePage,
+    gameEnd: GameEndPage,
+    gameStart: GameStartPage,
 }
 
 function changePage (pageToView) {
@@ -24,7 +30,6 @@ function changePage (pageToView) {
     functionPageToRender()
 
 }
-
 
 // Proceso de ver las cartas aleatoriamente
 function shuffleData(data){
@@ -51,12 +56,35 @@ function shuffleData(data){
     return pokemons
   }
 
+  //CONSTRUIR DATA -> ALGORITMO -> COGER NIVEL -> CORTAR LA CANTIDAD CARTAS -> MEZCLAR
+function buildLevelData ()  {
+
+    const level = getActuallyLevel()
+  
+    const dataLevel = pokemons.items.slice(0, level.cards / 2)
+  
+    //creo una copia con el doble de datos
+    const dataPokemon = dataLevel.concat(dataLevel);
+
+    const shuflePokemons = shuffleData(dataPokemon)
+  
+    return shuflePokemons
+    
+}
+
+
+function getActuallyLevel () {
+    let levelNow = Game.actuallyLvl //0
+    const level = Levels[levelNow - 1] 
+    return level
+}
 
 
   
 export {
     changePage,
-    shuffleData
+    buildLevelData,
+    getActuallyLevel
 }
 
 
