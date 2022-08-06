@@ -1,6 +1,5 @@
-import { reStartGame } from "../gameData.js"
+import { Game, reStartGame } from "../gameData.js"
 import { changePage } from "../helpers.js"
-
 
 export default function GameEndPage () {
     const gameEndContainer = document.querySelector('.gameEnd_container')
@@ -8,7 +7,7 @@ export default function GameEndPage () {
     gameEndContainer.innerHTML =`
     <div class="gameEnd_msgBox">
         <p class="gameEnd_text">Congratulation</p>
-        <div class="gameEnd_score">Score : 000</div>
+        <div class="gameEnd_score">Score : ${Game.score}</div>
     </div>
     <div class="gameEnd_buttonBox">
         <button class="btn_playAgain">Play Again</button>

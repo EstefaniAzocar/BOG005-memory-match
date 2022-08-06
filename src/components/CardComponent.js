@@ -109,6 +109,9 @@ const checkCards = (event) => {
 function nextLevel () {
     
 
+  //averiguar cual es el puntaj de la categoria actual
+  
+   Game.score += 100
     //si estoy en la posicion 1 significa que esoty en el nivel 2
     //si existen 2 nivels no mas ya llege al limite
    if(Game.actuallyLvl  < Levels.length ){

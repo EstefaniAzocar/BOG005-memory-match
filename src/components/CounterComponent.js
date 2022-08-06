@@ -1,3 +1,5 @@
+import { Game } from '../gameData.js' 
+
 
 function CounterComponent () {
     const containerCounter = document.createElement('div')
@@ -7,7 +9,7 @@ function CounterComponent () {
     containerCounter.innerHTML = `
         <div class="game_score">
             <img src="" alt="estrellas" class="game_scoreimgStar">
-            <div class="game_scoreBox">score</div>
+            <div class="game_scoreBox">${Game.score}</div>
         </div>
 
         <div class="game_containerTimer">
