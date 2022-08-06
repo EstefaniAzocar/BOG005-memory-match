@@ -1,3 +1,5 @@
+import { categorys as dataCategories } from "./data/index.js"
+
 const Levels = [
     {
         name: "nivel 1",
@@ -45,7 +47,32 @@ const Game = {
     // userName: "juan",
     score: 0,
     actuallyLvl: 1,
+    category: "pokemon"
 }
+
+
+const categories = [
+    {
+        name: 'pokemon',
+        image: 'logoPokemon.png',
+        data: dataCategories.pokemon
+    },
+    {
+        name: 'webdev',
+        image: 'logoMarvel.png',
+        data: dataCategories.webdev
+    },
+    {
+        name: 'pokemon',
+        image: 'logoPokemon.png',
+        data: dataCategories.pokemon
+    },
+    {
+        name: 'webdev',
+        image: 'logoMarvel.png',
+        data: dataCategories.webdev
+    },
+]
 
 
 function reStartGame () { 
@@ -56,5 +83,6 @@ function reStartGame () {
 export {
     Game,
     Levels, 
-    reStartGame
+    reStartGame,
+    categories,
 }

@@ -1,5 +1,6 @@
 
-import { changePage } from '../helpers.js';
+import { CategoryCardComponent } from '../components/CategoryCardComponent.js';
+import { categories } from '../gameData.js';
 
 export default function CategoriesPage () {
 
@@ -11,22 +12,19 @@ export default function CategoriesPage () {
         </div>
         
         <div class="gameTheme_containerCards">
-            <div class="gameTheme_card gameTheme--cardMarvel card" id="cardMarvel">
-                <img class="gameTheme_cardImg" src="../img/logoMarvel.png" alt="">
-            </div>
-            <div class="gameTheme_card gameTheme--cardPokemon card" id="cardPokemon" >
-                <img class="gameTheme_cardImg" src="../img/logoPokemon.png" alt="" >
-            </div>
+          
         </div>
     `
 
-    const cards = document.querySelectorAll('.gameTheme_card')
-    
+    const containerGameThemeCards = categoriesContainer.querySelector('.gameTheme_containerCards')
 
-    cards.forEach(card=>{
-        // console.log(card)
-        card.addEventListener('click',()=>{
-            changePage('game')
-        })
+    categories.forEach(category => {
+        
+        const categoryCard = CategoryCardComponent(category)
+
+        containerGameThemeCards.appendChild(categoryCard)
     })
+
 }
+
+

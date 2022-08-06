@@ -1,9 +1,9 @@
 import CategoriesPage from "./pages/CategoriesPage.js"
 import GamePage from "./pages/Game.js"
-import { Levels, Game } from "./gameData.js"
-import pokemons from './data/pokemon/pokemon.js'
+import { Levels, Game, categories } from "./gameData.js"
 import GameEndPage from "./pages/GameEndPage.js"
 import GameStartPage from "./pages/GameStart.js"
+
 
 const dictionaryPages = {
     gameTheme : CategoriesPage,
@@ -60,8 +60,12 @@ function shuffleData(data){
 function buildLevelData ()  {
 
     const level = getActuallyLevel()
+
+    const actuallyCategory = findCategory(Game.category)
+    
+    const data = actuallyCategory.data
   
-    const dataLevel = pokemons.items.slice(0, level.cards / 2)
+    const dataLevel = data.items.slice(0, level.cards / 2)
   
     //creo una copia con el doble de datos
     const dataPokemon = dataLevel.concat(dataLevel);
@@ -79,12 +83,17 @@ function getActuallyLevel () {
     return level
 }
 
+//devuelve el objeto de la categoria buscada por nombre
+function findCategory(){
+   return categories.find( category => category.name === Game.category)
+}
 
   
 export {
     changePage,
     buildLevelData,
-    getActuallyLevel
+    getActuallyLevel,
+    findCategory
 }
 
 

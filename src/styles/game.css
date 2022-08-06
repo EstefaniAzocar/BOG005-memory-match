@@ -62,7 +62,8 @@
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .gameCard img {
     object-fit: contain;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
   .gameCard_front, .gameCard_back {
     position: absolute;
     cursor: pointer;

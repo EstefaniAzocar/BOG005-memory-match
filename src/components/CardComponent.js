@@ -1,5 +1,5 @@
 import { Game, Levels } from "../gameData.js"
-import { changePage, getActuallyLevel } from "../helpers.js"
+import { changePage, findCategory, getActuallyLevel } from "../helpers.js"
 import GamePage from "../pages/Game.js"
 
 //funcion que construye un nodo(componente) html y lo retorna
@@ -9,12 +9,14 @@ function CardComponent(card){
     const cardBox = document.createElement('div')
     cardBox.className = 'gameCard'
 
+    const actuallyCategory = findCategory() 
+
     const contentCard = `
         <div class= 'gameCard_back' id='${card.id}'>
           <img src="${card.image}"/>
         </div>
         <div class='gameCard_front'>
-          <img src="../img/logoPokemon.png"/>
+          <img src="../img/${actuallyCategory.image}"/>
         </div>
     `
 
@@ -23,6 +25,7 @@ function CardComponent(card){
 
     cardBox.addEventListener('click',(e)=>{
 
+      console.log(Game.category)
       checkCards(e);
     
     })
