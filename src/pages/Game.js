@@ -1,7 +1,7 @@
 import { CardsContainerComponent } from "../components/App.js"
-import { getActuallyLevel } from "../helpers.js"
-// import { renderGame } from "../components/App.js"
-// import {Game} from '../gameData.js'
+import { CounterComponent } from "../components/CounterComponent.js"
+import { PowersComponent } from "../components/PowersComponent.js"
+
 
 
 //RENDERIZAR TOOOOOODOOO EL GAME
@@ -27,48 +27,9 @@ export default function GamePage () {
 }
 
 
-function CounterComponent () {
-    const containerCounter = document.createElement('div')
 
-    containerCounter.className = 'game_containerCounter'
 
-    containerCounter.innerHTML = `
-        <div class="game_score">
-            <img src="" alt="estrellas" class="game_scoreimgStar">
-            <div class="game_scoreBox">score</div>
-        </div>
 
-        <div class="game_containerTimer">
-            <div class="game_timer">0:30</div>
-        </div>
-    `
-
-    return containerCounter
-}
-
-function PowersComponent () {
-
-    const powersContainer = document.createElement('div')
-
-    powersContainer.className = 'game_containerPowers'
-
-    powersContainer.innerHTML = `
-        <div class="game_power game_power--addTime" >
-            <img src="../img/iconTimer.png" alt="" class="game_imgAddTime">
-        </div>
-
-        <div class="game_power game_power--showAll" >
-            <img src="../img/bomba.png" alt="" class="game_showAll">
-        </div>
-
-        <div class="game_power game_power--showTwo" >
-            <img src="../img/dinamita.png" alt="" class="game_showTwo">
-        </div>
-    `
-
-    return powersContainer
-
-}
 
 
 // function nextLvl (){
