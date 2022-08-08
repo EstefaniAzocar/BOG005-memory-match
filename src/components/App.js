@@ -21,6 +21,9 @@ import {Game} from '../gameData.js'
 
 let levelNow = Game.actuallyLvl //0
 console.log('inicial' , levelNow)
+let temporizador = false
+let timer = 20
+
 
 function renderGame (nivel) {
 
@@ -114,6 +117,7 @@ function CardComponent(){
 
       //si false
       //desvoltearse
+      
 
     })
 
@@ -121,12 +125,17 @@ function CardComponent(){
 
 
   })
+  if(temporizador = false){
+    contarTiempo();
+    temporizador = true;
+  }
 
   // const arrayShowCards = document.querySelectorAll('.toggleCard')
   // console.log(arrayShowCards)
 
   return containerCards
 }
+
 
 const checkCards = (event, cardsLvl) => {
 
@@ -186,7 +195,7 @@ const checkCards = (event, cardsLvl) => {
     // console.log('no son iguales')
 
   }
-
+  
   const arrayShowCards = document.querySelectorAll('.toggleCard')
   const quantityShowCards = arrayShowCards.length
   console.log({
@@ -199,6 +208,7 @@ const checkCards = (event, cardsLvl) => {
   } else {
     console.log('faltan descubrir cartas')
   }
+  
 }
 
 
@@ -213,6 +223,12 @@ function nextLevel (lvl) {
 
   renderGame(lvl)
 
+}
+
+function contarTiempo(){
+  setInterval(() =>{
+    timer --;
+  },1000);
 }
 
 
