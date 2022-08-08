@@ -12,6 +12,7 @@ const dictionaryPages = {
     gameStart: GameStartPage,
 }
 
+//funcion que nos permite cambiar de pagina 
 function changePage (pageToView) {
 
     const pages = document.querySelectorAll('.pages')
@@ -31,7 +32,7 @@ function changePage (pageToView) {
 
 }
 
-// Proceso de ver las cartas aleatoriamente
+// Proceso de ver las cartas aleatoriamente, mediante el algoritmo de fisher
 function shuffleData(data){
 
     //crear una copia para no modificar la referencia de lista real
@@ -76,7 +77,7 @@ function buildLevelData ()  {
     
 }
 
-
+//funcion qeu nos permite obtener el nivel actual del juego y nos retorna wl nivel actual
 function getActuallyLevel () {
     let levelNow = Game.actuallyLvl //0
     const level = Levels[levelNow - 1] 
