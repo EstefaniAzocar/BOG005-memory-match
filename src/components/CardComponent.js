@@ -44,7 +44,8 @@ const checkCards = (event) => {
     //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
     const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
     // console.log(listUncoveredCard)
-  
+
+    // counterTimer() 
   
     if(listUncoveredCard.length == 2) {
   
@@ -92,6 +93,7 @@ const checkCards = (event) => {
   
     }
   
+    //nos permite identificar cuando se han abierto todas las cartas
     const arrayShowCards = document.querySelectorAll('.toggleCard').length //numero
 
     const quantityShowCards = getActuallyLevel().cards //numero
@@ -123,14 +125,51 @@ function nextLevel () {
       changePage('gameEnd')
       console.log('se acabo el juego')
 
-   }
+  }
 
     // renderGame(lvl)
   
-  }
+}
+
+function counterTimer () {
+  //tiempo para c/ nivel
+  let time = 10 
+
+  // const timerBox = document.querySelector('#timer')
+  // console.log(timerBox)
+  // // const div = document.createElement('div')
+
+  // timerBox.appendChild(div)
+
+  
+  
+  
+  //temporizador
+  const timer = setInterval(() =>{
+      
+      console.log(time)
+      // div.innerHTML = `tiempo = ${time}`
+
+      time-= 1
+    
+      if (time == 0) {
+
+          clearInterval(timer)
+          console.log('se aacbo el tiempo')
+
+      }
+
+  }, 1000);
+
+  console.log(time)
+
+}
   
   
 
 
 
-export { CardComponent }
+export { 
+  CardComponent,
+  counterTimer,
+ }
