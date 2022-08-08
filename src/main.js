@@ -1,4 +1,4 @@
 import { changePage } from './helpers.js'
 
-GameStart()
+// GameStart()
 changePage('gameStart')
