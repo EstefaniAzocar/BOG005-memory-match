@@ -1,13 +1,13 @@
 import { buildLevelData } from '../helpers.js'
-import { CardComponent, counterTimer } from './CardComponent.js'
+import { CardComponent, counterTimer} from './CardComponent.js'
 
 // import { Game, Levels } from '../gameData.js'
 
 function CardsContainerComponent(){
   
   //CONSTRUYE UNA LISTA DE CARTAS 
-  counterTimer()
   const data = buildLevelData()
+
 
 
   const containerCards = document.createElement('div')

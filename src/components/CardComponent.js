@@ -95,7 +95,7 @@ const checkCards = (event) => {
   
     //nos permite identificar cuando se han abierto todas las cartas
     const arrayShowCards = document.querySelectorAll('.toggleCard').length //numero
-
+    console.log("arrayshowcards", arrayShowCards)
     const quantityShowCards = getActuallyLevel().cards //numero
 
     if(quantityShowCards == arrayShowCards) {
@@ -113,7 +113,8 @@ function nextLevel () {
 
   //averiguar cual es el puntaj de la categoria actual
   
-   Game.score += 100
+   Game.score += Game.time*2
+   clearInterval(Game.timer)
     //si estoy en la posicion 1 significa que esoty en el nivel 2
     //si existen 2 nivels no mas ya llege al limite
    if(Game.actuallyLvl  < Levels.length ){
@@ -131,37 +132,28 @@ function nextLevel () {
   
 }
 
-function counterTimer () {
+function counterTimer (containerCounter) {
   //tiempo para c/ nivel
-  let time = 10 
+  console.log(containerCounter)
+  const nivel = getActuallyLevel()
+  Game.time = nivel.time
 
-  // const timerBox = document.querySelector('#timer')
-  // console.log(timerBox)
-  // // const div = document.createElement('div')
-
-  // timerBox.appendChild(div)
-
-  
-  
-  
-  //temporizador
-  const timer = setInterval(() =>{
+  const timerBox = containerCounter.querySelector('#timer')
+  Game.timer = setInterval(() =>{
       
-      console.log(time)
-      // div.innerHTML = `tiempo = ${time}`
+       timerBox.textContent = Game.time
 
-      time-= 1
-    
-      if (time == 0) {
+      Game.time -= 1
+      console.log(Game.time)
+      if (Game.time == 0) {
 
-          clearInterval(timer)
-          console.log('se aacbo el tiempo')
+          clearInterval(Game.timer)
+          changePage("gameEnd")
 
       }
 
   }, 1000);
 
-  console.log(time)
 
 }
   

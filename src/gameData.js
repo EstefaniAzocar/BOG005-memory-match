@@ -9,7 +9,7 @@ const Levels = [
     {
         name: "nivel 2",
         cards: 6,
-        time: 25,
+        time: 20,
     },
     // {
     //     name: "nivel 3",
@@ -52,7 +52,9 @@ const Game = {
     // userName: "juan",
     score: 0,
     actuallyLvl: 1,
-    category: "pokemon"
+    category: "pokemon",
+    timer: null,
+    time:0
 }
 
 

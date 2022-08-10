@@ -1,4 +1,5 @@
 import { Game } from '../gameData.js' 
+import { getActuallyLevel } from '../helpers.js'
 
 
 function CounterComponent () {
@@ -6,6 +7,7 @@ function CounterComponent () {
 
     containerCounter.className = 'game_containerCounter'
 
+    const nivel = getActuallyLevel()
     containerCounter.innerHTML = `
         <div class="game_score">
             <img src="" alt="estrellas" class="game_scoreimgStar">
@@ -13,7 +15,7 @@ function CounterComponent () {
         </div>
 
         <div class="game_containerTimer">
-            <div class="game_timer" id"timer">00</div>
+            <div class="game_timer" id="timer">${nivel.time}</div>
         </div>
     `
 
