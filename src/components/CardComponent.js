@@ -1,6 +1,6 @@
 import { Game, Levels } from "../gameData.js"
 import { changePage, findCategory, getActuallyLevel } from "../helpers.js"
-import GamePage from "../pages/Game.js"
+// import GamePage from "../pages/Game.js"
 
 //funcion que construye un nodo(componente) html y lo retorna
   //funcion que se usa en cardsContainer para construir toda la pageGamae
@@ -120,7 +120,8 @@ function nextLevel () {
    if(Game.actuallyLvl  < Levels.length ){
        //render game de nuevo
         Game.actuallyLvl += 1
-        GamePage()
+        // GamePage()
+        changePage('game')
 
     }else{
       changePage('gameEnd')

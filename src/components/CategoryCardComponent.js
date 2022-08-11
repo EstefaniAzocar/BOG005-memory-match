@@ -11,7 +11,7 @@ function CategoryCardComponent (category){
         <img class="gameTheme_cardImg" src="../img/${category.image}" alt="">
     `
 
-    cardCategory.addEventListener('click',(e)=>{
+    cardCategory.addEventListener('click',()=>{
         Game.category = cardCategory.id
         console.log(Game)
         changePage('game')

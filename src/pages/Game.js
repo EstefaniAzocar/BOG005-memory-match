@@ -8,10 +8,15 @@ import { PowersComponent } from "../components/PowersComponent.js"
 //RENDERIZAR TOOOOOODOOO EL GAME
 export default function GamePage () {
 
-    const gameContainer = document.querySelector('.game_container')
-    gameContainer.innerHTML = ``
+    const sectionContainer = document.createElement('section')
+    sectionContainer.className = 'game'
+    sectionContainer.innerHTML = `
+        <div class="game_container">
+            
+        </div>
+    `
 
-
+    const gameContainer = sectionContainer.querySelector('.game_container')
     //COUNTER COMPONENT
     const containerCounter = CounterComponent()
     gameContainer.appendChild(containerCounter)
@@ -26,6 +31,7 @@ export default function GamePage () {
 
     counterTimer(containerCounter)
 
+    return sectionContainer
 }
 
 

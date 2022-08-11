@@ -9,7 +9,7 @@ const Levels = [
     {
         name: "nivel 2",
         cards: 6,
-        time: 20,
+        time: 25,
     },
     // {
     //     name: "nivel 3",
@@ -19,33 +19,33 @@ const Levels = [
     // {
     //     name: "nivel 4",
     //     cards: 12,
-    //     time: 40,
+    //     time: 35,
     // },
     // {
     //     name: "nivel 5",
     //     cards: 18,
-    //     time: 50,
+    //     time: 40,
     // }
 ]
 
 
-const powers = [
-    {
-        name: '',
-        img: '',
-        quantity: 2,
-    },
-    {
-        name: '',
-        img: '',
-        quantity: 2,
-    },
-    {
-        name: '',
-        img: '',
-        quantity: 2,
-    }
-]
+// const powers = [
+//     {
+//         name: '',
+//         img: '',
+//         quantity: 2,
+//     },
+//     {
+//         name: '',
+//         img: '',
+//         quantity: 2,
+//     },
+//     {
+//         name: '',
+//         img: '',
+//         quantity: 2,
+//     }
+// ]
 
 
 const Game = {
@@ -53,7 +53,7 @@ const Game = {
     score: 0,
     actuallyLvl: 1,
     category: "pokemon",
-    timer: null,
+    timer: null, //se necesita que guarde un tiemp[o que no existe aun
     time:0
 }
 
