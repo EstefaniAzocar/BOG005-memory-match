@@ -44,6 +44,8 @@
     background: white;
     border-radius: 8px;
     border: 5px solid #ff7e07;
+    border-left: 10px solid #ff7e07;
+    border-right: 10px solid #ff7e07;
     text-align: center;
     font-family: "Mochiy Pop One", sans-serif;
     font-weight: 600;
