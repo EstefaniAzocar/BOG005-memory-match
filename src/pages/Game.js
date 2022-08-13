@@ -1,7 +1,7 @@
 import { CardsContainerComponent } from "../components/App.js"
 import { counterTimer } from "../components/CardComponent.js"
 import { CounterComponent } from "../components/CounterComponent.js"
-import { PowersComponent } from "../components/PowersComponent.js"
+// import { PowersComponent } from "../components/PowersComponent.js"
 
 
 
@@ -26,12 +26,16 @@ export default function GamePage () {
     gameContainer.appendChild(cards)
     
 
-    const powers = PowersComponent()
-    gameContainer.appendChild(powers)
+    // const powers = PowersComponent()
+    // gameContainer.appendChild(powers)
 
-    counterTimer(containerCounter)
+    // counterTimer(containerCounter)
 
     return sectionContainer
+}
+
+export {
+    GamePage
 }
 
 

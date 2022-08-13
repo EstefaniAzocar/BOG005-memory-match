@@ -2,13 +2,18 @@
 
 .game{
     width: 100%;
+    padding: 20px 0;
     height: 100vh;
-    @include flex-column-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background: url(../img/backgroundBlue.jpg) no-repeat center/cover;
 
     &_container{
         @include flex-column-center;
-        gap: 20px;
+        width: 80%;
+        gap: 80px;
     }
 
 
@@ -30,17 +35,37 @@
 
     &_score{
         width: 40%;
-        background: pink;
         @include flex-column-center;
     }
 
+    &_scoreimgStar{
+        width: 80%;
+    }
+
     &_scoreBox{
-        
+        width: 90%;
+        background: white;
+        border-radius: 8px;
+        border: 5px solid #ff7e07;
+        text-align: center;
+        font-family: $font-family-Text;
+        font-weight: 600;
+        font-size: 20px;
+        color: $color-text;
     }
 
     &_containerTimer{
         width: 40%;
-        background: blue;
+        padding-top: 30px;
+    }
+
+    &_timer{
+        width: 90%;
+        text-align: center;
+        font-family: $font-family-Text;
+        color: $color-text;
+        font-size: 26px;
+        font-weight: 600;
     }
 
 

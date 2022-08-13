@@ -1,5 +1,6 @@
 import { Game, Levels } from "../gameData.js"
 import { changePage, findCategory, getActuallyLevel } from "../helpers.js"
+import { CounterComponent } from "./CounterComponent.js"
 // import GamePage from "../pages/Game.js"
 
 //funcion que construye un nodo(componente) html y lo retorna
@@ -35,17 +36,25 @@ function CardComponent(card){
 }
 
 //funcion que permite validar las parejas
-const checkCards = (event) => {
+function checkCards (event) {
 
     const clickedCard = event.target
     clickedCard.classList.toggle('toggleCard')
     clickedCard.classList.add('uncoveredCard')
-  
-    //primero usamos selector para todas las tarjetas que tienen la clase "flipped"
+    
+    //primero usamos selector para todas las tarjetas que tienen la clase "uncoveredCard"
     const listUncoveredCard = document.querySelectorAll('.uncoveredCard');
     // console.log(listUncoveredCard)
+    
+    const containerCounter = CounterComponent()
 
-    // counterTimer() 
+    if(listUncoveredCard.length == 1) {
+
+      console.log(listUncoveredCard.length, 'se dio click a la primer tarjeta')
+     
+      counterTimer(containerCounter)
+    }
+
   
     if(listUncoveredCard.length == 2) {
   
@@ -95,7 +104,7 @@ const checkCards = (event) => {
   
     //nos permite identificar cuando se han abierto todas las cartas
     const arrayShowCards = document.querySelectorAll('.toggleCard').length //numero
-    console.log("arrayshowcards", arrayShowCards)
+    // console.log("arrayshowcards", arrayShowCards)
     const quantityShowCards = getActuallyLevel().cards //numero
 
     if(quantityShowCards == arrayShowCards) {

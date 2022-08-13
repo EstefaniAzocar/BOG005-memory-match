@@ -33,3 +33,7 @@ export default function GameEndPage () {
 
     return sectionEndContainer
 }
+
+export {
+    GameEndPage
+}

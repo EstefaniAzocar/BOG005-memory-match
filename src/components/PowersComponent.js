@@ -1,28 +1,31 @@
 
-function PowersComponent () {
+//INTENTAREMOS INPLEMENTARLOS LUEGO
 
-    const powersContainer = document.createElement('div')
 
-    powersContainer.className = 'game_containerPowers'
+// function PowersComponent () {
 
-    powersContainer.innerHTML = `
-        <div class="game_power game_power--addTime" >
-            <img src="../img/iconTimer.png" alt="" class="game_imgAddTime">
-        </div>
+//     const powersContainer = document.createElement('div')
 
-        <div class="game_power game_power--showAll" >
-            <img src="../img/bomba.png" alt="" class="game_showAll">
-        </div>
+//     powersContainer.className = 'game_containerPowers'
 
-        <div class="game_power game_power--showTwo" >
-            <img src="../img/dinamita.png" alt="" class="game_showTwo">
-        </div>
-    `
+//     powersContainer.innerHTML = `
+//         <div class="game_power game_power--addTime" >
+//             <img src="../img/iconTimer.png" alt="" class="game_imgAddTime">
+//         </div>
 
-    return powersContainer
+//         <div class="game_power game_power--showAll" >
+//             <img src="../img/bomba.png" alt="" class="game_showAll">
+//         </div>
 
-}
+//         <div class="game_power game_power--showTwo" >
+//             <img src="../img/dinamita.png" alt="" class="game_showTwo">
+//         </div>
+//     `
 
-export {
-    PowersComponent
-}
+//     return powersContainer
+
+// }
+
+// export {
+//     PowersComponent
+// }

@@ -10,7 +10,7 @@ function CounterComponent () {
     const nivel = getActuallyLevel()
     containerCounter.innerHTML = `
         <div class="game_score">
-            <img src="" alt="estrellas" class="game_scoreimgStar">
+            <img src="../img/estrellas.png" alt="estrellas" class="game_scoreimgStar">
             <div class="game_scoreBox">${Game.score}</div>
         </div>
 

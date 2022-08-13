@@ -22,7 +22,6 @@ export default function GameStartPage () {
         </div>
     `
 
-    // counterTimer() 
     
     const playInit = sectionContainer.querySelector('#button');
 
@@ -35,38 +34,3 @@ export default function GameStartPage () {
 
     return sectionContainer
 }
-
-
-
-// function counterTimer () {
-//     //tiempo para c/ nivel
-//     let time = 10 
-  
-//     const timerBox = document.querySelector('.gameStart_container')
-//     const div = document.createElement('div')
-
-//     timerBox.appendChild(div)
-
-    
-    
-    
-//     //temporizador
-//     const timer = setInterval(() =>{
-        
-//         console.log(time)
-//         div.innerHTML = `tiempo = ${time}`
-
-//         time-= 1
-      
-//         if (time == 0) {
-  
-//             clearInterval(timer)
-//             console.log('se aacbo el tiempo')
-  
-//         }
-  
-//     }, 1000);
-  
-//     console.log(time)
-  
-// }

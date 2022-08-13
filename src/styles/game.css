@@ -1,10 +1,11 @@
 @charset "UTF-8";
 .game {
   width: 100%;
+  padding: 20px 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: url(../img/backgroundBlue.jpg) no-repeat center/cover; }
   .game_container {
@@ -12,7 +13,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px; }
+    width: 80%;
+    gap: 80px; }
   .game_containerCards {
     cursor: pointer;
     display: flex;
@@ -30,14 +32,32 @@
     justify-content: space-between; }
   .game_score {
     width: 40%;
-    background: pink;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  .game_scoreimgStar {
+    width: 80%; }
+  .game_scoreBox {
+    width: 90%;
+    background: white;
+    border-radius: 8px;
+    border: 5px solid #ff7e07;
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #28282c; }
   .game_containerTimer {
     width: 40%;
-    background: blue; }
+    padding-top: 30px; }
+  .game_timer {
+    width: 90%;
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #28282c;
+    font-size: 26px;
+    font-weight: 600; }
   .game_containerPowers {
     width: 90%;
     display: flex;

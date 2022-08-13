@@ -60,7 +60,7 @@ function shuffleData(data){
     }
   
     return pokemons
-  }
+}
 
   //CONSTRUIR DATA -> ALGORITMO -> COGER NIVEL -> CORTAR LA CANTIDAD CARTAS -> MEZCLAR
 function buildLevelData ()  {
@@ -99,7 +99,8 @@ export {
     changePage,
     buildLevelData,
     getActuallyLevel,
-    findCategory
+    findCategory,
+    shuffleData
 }
 
 
