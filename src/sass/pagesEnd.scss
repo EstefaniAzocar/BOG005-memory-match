@@ -1,0 +1,54 @@
+@import './generics.scss';
+
+.gameEnd{
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0;
+    @include flex-column-center();
+    background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+    gap: 20px;
+
+    &_container{
+        width: 90%;
+        @include flex-column-center();
+        gap: 20px;
+    }
+
+    &_msgBox{
+        width: 80%;
+        @include flex-column-center();
+    }
+
+    &_text{
+        width: 100%;
+        max-width: 400px;
+        @include general-text();
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+
+    &_score{
+        width: 100%;
+        max-width: 400px;
+        @include general-text();
+        font-size: 24px;
+
+    }
+
+    &_buttonBox{
+        width: 50%;
+        justify-content: space-between;
+        @include perfect-center();
+
+        &_playAgain{
+            width: 90%;
+            max-width: 180px;
+            padding: 15px 30px;
+            border-radius: 50%;
+            border-style: none;
+            cursor: pointer;
+        }
+    }
+
+   
+}

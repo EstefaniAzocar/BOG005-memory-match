@@ -1,0 +1,51 @@
+.gameEnd {
+  width: 100%;
+  min-height: 100vh;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+  gap: 20px; }
+  .gameEnd_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; }
+  .gameEnd_msgBox {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .gameEnd_text {
+    width: 100%;
+    max-width: 400px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #28282c;
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 10px; }
+  .gameEnd_score {
+    width: 100%;
+    max-width: 400px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #28282c;
+    text-align: center;
+    font-size: 24px; }
+  .gameEnd_buttonBox {
+    width: 50%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .gameEnd_buttonBox_playAgain {
+      width: 90%;
+      max-width: 180px;
+      padding: 15px 30px;
+      border-radius: 50%;
+      border-style: none;
+      cursor: pointer; }

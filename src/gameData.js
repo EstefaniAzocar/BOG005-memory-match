@@ -4,12 +4,12 @@ const Levels = [
     {
         name: "nivel 1",
         cards: 4,
-        time: 20,
+        time: 2,
     },
     {
         name: "nivel 2",
         cards: 6,
-        time: 25,
+        time: 2,
     },
     // {
     //     name: "nivel 3",
