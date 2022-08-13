@@ -15,7 +15,7 @@ function CounterComponent () {
         </div>
 
         <div class="game_containerTimer">
-            <div class="game_timer" id="timer">${nivel.time}</div>
+            <div class="game_timer" id="timer">00:${nivel.time}</div>
         </div>
     `
 

@@ -11,9 +11,10 @@
     background: url(../img/backgroundBlue.jpg) no-repeat center/cover;
 
     &_container{
-        @include flex-column-center;
         width: 80%;
+        height: 100%;
         gap: 80px;
+        @include flex-column-center;
     }
 
 
@@ -23,7 +24,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 5px;
         box-sizing: border-box; /*Cuando agregemos un width a un elemento y luego se añada un padding, no modifique el tamaño del elemento */    
     }
 

@@ -1,5 +1,4 @@
 import { CardsContainerComponent } from "../components/App.js"
-import { counterTimer } from "../components/CardComponent.js"
 import { CounterComponent } from "../components/CounterComponent.js"
 // import { PowersComponent } from "../components/PowersComponent.js"
 
