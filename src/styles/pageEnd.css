@@ -1,0 +1,72 @@
+.gameEnd {
+  width: 100%;
+  min-height: 100vh;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+  gap: 20px;
+  position: relative; }
+  .gameEnd_congratulation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 500px;
+    max-height: 900px; }
+  .gameEnd_container {
+    width: 90%;
+    height: 100%;
+    gap: 10px;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; }
+  .gameEnd_msgBox {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .gameEnd_text {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1F5454; }
+  .gameEnd_score {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #C91414; }
+  .gameEnd_buttonBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; }
+  .gameEnd button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer; }
+
+.btn_playAgain {
+  background: url(../img/playAgain.png) no-repeat center/cover; }
+  .btn_playAgain:hover {
+    background: url(../img/hoverPlayAgain.png) no-repeat center/cover; }
+
+.btn_exit {
+  background: url(../img/exit.png) no-repeat center/cover; }
+  .btn_exit:hover {
+    background: url(../img/hoverExit.png) no-repeat center/cover; }
+
+@media (min-width: 750px) {
+  .gameEnd_congratulation {
+    max-width: 100%;
+    max-height: 500px; } }
+
+@media (min-width: 1024px) {
+  .gameEnd_congratulation {
+    max-height: 680px; } }

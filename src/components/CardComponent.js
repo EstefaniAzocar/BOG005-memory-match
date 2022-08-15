@@ -158,14 +158,29 @@ function counterTimer() {
 
       clearInterval(Game.timer)
       changePage("gameEnd")
-
+      GameOver()
     }
 
   }, 1000);
-
-
 }
 
+
+
+function GameOver () {
+
+  const imgcongratulation = document.querySelector('.gameEnd_congratulation')
+  imgcongratulation.remove()
+
+  const mensaje = document.querySelector('.gameEnd_text')
+
+  mensaje.innerHTML = 'Game Over'
+  mensaje.style.color = '#C91414'
+  mensaje.style.fontSize = '42px'
+
+
+  const score = document.querySelector('.gameEnd_score')
+  score.innerHTML = ''
+}
 
 
 

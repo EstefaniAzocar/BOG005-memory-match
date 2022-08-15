@@ -1,0 +1,98 @@
+@import './generics.scss';
+
+.gameEnd{
+    width: 100%;
+    min-height: 100vh;
+    // min-height: 100%;
+    padding: 70px 0;
+    @include flex-column-center();
+    background: linear-gradient(rgba(0, 0, 0, 0.05) 100%, rgba(0, 0, 0, 0.05) 100%), url(../img/backgroundYellow.jpg) no-repeat center/cover;
+    gap: 20px;
+    position: relative;
+
+    &_congratulation{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-width: 500px;
+        max-height: 900px;
+    }
+
+
+    &_container{
+        width: 90%;
+        height: 100%;
+        gap: 10px;
+        padding: 25px 0;
+        @include flex-column-center;
+        position: absolute;
+    }
+
+    &_msgBox{
+        padding-top: 90px;
+        @include flex-column-center;
+    }
+
+    &_text{
+        font-family: $font-family-Text;
+        font-size: 30px;
+        font-weight: bold;
+        color: #1F5454;
+    }
+
+    &_score{
+        font-family: $font-family-Text;
+        font-size: 24px;
+        font-weight: 400;
+        color: #C91414;
+    }
+
+    &_buttonBox{
+        @include flex-row;
+        gap: 20px;
+    }
+
+    & button{
+        width: 60px;
+        height: 60px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.btn_playAgain {
+    background:  url(../img/playAgain.png) no-repeat center/cover;
+
+    &:hover{
+        background:  url(../img/hoverPlayAgain.png) no-repeat center/cover;
+    }
+}
+.btn_exit {
+    background:  url(../img/exit.png) no-repeat center/cover;
+
+    &:hover{
+        background:  url(../img/hoverExit.png) no-repeat center/cover;
+    }
+}
+
+
+@media (min-width: 750px) {
+    
+    .gameEnd{
+        
+        &_congratulation{
+            max-width: 100%;
+            max-height: 500px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .gameEnd{
+        
+        &_congratulation{
+            max-height: 680px;
+        }
+    }
+}

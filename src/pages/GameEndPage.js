@@ -7,16 +7,18 @@ export default function GameEndPage () {
     sectionEndContainer.className = 'gameEnd'
 
     sectionEndContainer.innerHTML =`
-    <div class="gameEnd_container">
-        <div class="gameEnd_msgBox">
-            <p class="gameEnd_text">Congratulation</p>
-            <div class="gameEnd_score">Score : ${Game.score}</div>
+    <img src="../img/congratulation.png" alt="" class="gameEnd_congratulation">
+
+        <div class="gameEnd_container">
+            <div class="gameEnd_msgBox">
+                <p class="gameEnd_text">Congratulation</p>
+                <div class="gameEnd_score">Score : ${Game.score}</div>
+            </div>
+            <div class="gameEnd_buttonBox">
+                <button class="btn_playAgain"></button>
+                <button class="btn_exit"></button>
+            </div>
         </div>
-        <div class="gameEnd_buttonBox">
-            <button class="btn_playAgain">Play Again</button>
-            <button class="btn_exit">Exit</button>
-        </div>
-    </div>
     `
 
     const btn_playAgain = sectionEndContainer.querySelector('.btn_playAgain')

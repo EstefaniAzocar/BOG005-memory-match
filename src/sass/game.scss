@@ -2,8 +2,11 @@
 
 .game{
     width: 100%;
-    padding: 20px 0;
     height: 100vh;
+    // min-height: 850px;
+    // height: 100%;
+    min-height: 600px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,20 +14,26 @@
     background: url(../img/backgroundBlue.jpg) no-repeat center/cover;
 
     &_container{
-        width: 80%;
+        width: 90%;
         height: 100%;
         gap: 80px;
-        @include flex-column-center;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
 
     &_containerCards{
+        width: 100%;
+        // max-width: 260px;
         cursor: pointer;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 5px;
+        gap: 20px;
         box-sizing: border-box; /*Cuando agregemos un width a un elemento y luego se añada un padding, no modifique el tamaño del elemento */    
     }
 
@@ -36,6 +45,7 @@
 
     &_score{
         width: 40%;
+        max-width: 150px;
         @include flex-column-center;
     }
 
@@ -71,23 +81,22 @@
         font-weight: 600;
     }
 
+    // &_containerPowers{
+    //     width: 90%;
+    //     @include flex-row;
+    //     justify-content: center;
+    //     gap: 20px;
+    // }
 
-    &_containerPowers{
-        width: 90%;
-        @include flex-row;
-        justify-content: center;
-        gap: 20px;
-    }
+    // &_power{
+    //     width: 20%;
+    //     max-width: 80px;
+    // }
 
-    &_power{
-        width: 20%;
-        max-width: 80px;
-    }
-
-    &_imgAddTime, &_showAll, &_showTwo{
-        width: 100%;
-        max-width: 100px;
-    }
+    // &_imgAddTime, &_showAll, &_showTwo{
+    //     width: 100%;
+    //     max-width: 100px;
+    // }
 }
 
 
@@ -150,8 +159,30 @@
 
 @media (min-width: 750px) {
 
+    .game{
+
+        &_containerCards{
+            width: 70%;
+        }
+    }
+
     .gameCard{
         height: 100px;
         width: 100px;
+    }
+}
+@media (min-width: 1024px) {
+
+    .game{
+
+        &_containerCards{
+            width: 100%;
+            max-width: 920px;
+        }
+    }
+
+    .gameCard{
+        height: 150px;
+        width: 120px;
     }
 }
