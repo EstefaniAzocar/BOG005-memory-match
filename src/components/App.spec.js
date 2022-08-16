@@ -54,16 +54,16 @@ describe('shuffleData', () => {
   
       const validorData = unsortData.map((element, index)=>{
         if (element !== introData[index]){
+              // console.log(element, introData[index],'estan en la misma posicion')
               return true
-                // console.log(element, introData[index],'estan en la misma posicion')
             } else {
+              // console.log(element, introData[index],'no estan en la misma posicion')
               return false
-            // console.log(element, introData[index],'no estan en la misma posicion')
         }
         
     })
   
-    console.log(validorData)
+      console.log(validorData)
       expect(validorData).toContain(true);
     });
   })
@@ -88,7 +88,7 @@ describe('comparation equal cards', () => {
 
     firstCard.click()
 
-    console.log('cualquier cosa')
+    // console.log('cualquier cosa')
 
     setTimeout(()=>{
       firstCardTwin.click()
@@ -107,7 +107,7 @@ describe('comparation equal cards', () => {
 
     },1000)
 
-    console.log('paulina')
+    // console.log('paulina')
   });
 });
 
