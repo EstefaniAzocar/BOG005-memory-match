@@ -11,21 +11,21 @@ const Levels = [
         cards: 6,
         time: 25, //25
     },
-    // {
-    //     name: "nivel 3",
-    //     cards: 8,
-    //     time: 30, //30
-    // },
-    // {
-    //     name: "nivel 4",
-    //     cards: 12,
-    //     time: 35, //35
-    // },
-    // {
-    //     name: "nivel 5",
-    //     cards: 18,
-    //     time: 40, //40
-    // }
+    {
+        name: "nivel 3",
+        cards: 8,
+        time: 30, //30
+    },
+    {
+        name: "nivel 4",
+        cards: 12,
+        time: 35, //35
+    },
+    {
+        name: "nivel 5",
+        cards: 18,
+        time: 40, //40
+    }
 ]
 
 
