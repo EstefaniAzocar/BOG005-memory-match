@@ -2,19 +2,18 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Resumen del proyecto](#2-Resumen-del-proyecto)
+* [2. Historias de usuario](#3-Historias-de-usuario)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [4. Diseño de la Interfaz de Usuario](#4-Diseño-de-interfaz-de-usuario)
+* [5. Pre-requisitos](#5-Pre-requisitos)
+* [6. Demo](#6-Demo)
+* [7. Autores](#7-Autores)
+
 
 ***
 
-## 2. Resumen del proyecto
+## 1. Resumen del proyecto
 
 En este proyecto construirás una versión _web_ del juego _Memory Match_, en la
 que una jugadora pueda jugar sola, en el navegador. Esta diseñado para cualquier persona que quiera distraerse y ejercitar su memoria
@@ -22,7 +21,7 @@ que una jugadora pueda jugar sola, en el navegador. Esta diseñado para cualquie
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web basada en data e interacción con la usuaria.
 
-### Historias de usuario
+## 2. Historias de usuario
 
 #### 1. Historia de Usuario
 Que tenga una pagina de inicio y un boton de jugar
@@ -49,7 +48,50 @@ Que pueda jugar en en movil o computadora
 #### Criterio de aceptacion
 El usuario puede jugar en cualquier dispositivo como tablet, celular o computadora.
 
-### Diseño de la Interfaz de Usuario
+## 3. Objetivos de aprendizaje
+
+### HTML
+- [x] **Uso de HTML semántico**
+
+### CSS
+- [x] **Uso de selectores de CSS**
+- [x] **Modelo de caja (box model): borde, margen, padding**
+- [x] **Uso de flexbox en CSS**
+
+### Web APIs
+- [x] **Uso de selectores del DOM**
+- [x] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+- [x] **Manipulación dinámica del DOM**
+### JavaScript
+- [x] **Diferenciar entre tipos de datos primitivos y no primitivos**
+- [x] **Arrays (arreglos)**
+- [x] **Objetos (key, value)**
+- [x] **Variables (declaración, asignación, ámbito)**
+- [x] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+- [x] **Uso de bucles/ciclos (while, for, for..of)**
+- [x] **Funciones (params, args, return)**
+- [x] **Pruebas unitarias (unit tests)**
+- [x] **Módulos de ECMAScript (ES Modules)**
+- [x] **Uso de linter (ESLINT)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+### Control de Versiones (Git y GitHub)
+- [x] **Git: Instalación y configuración**
+- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [x] **GitHub: Despliegue con GitHub Pages**
+- [x] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+### user-centricity
+- [x] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
+### product-design
+- [x] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [x] **Seguir los principios básicos de diseño visual**
+### research
+- [x] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+
+
+## 4. Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
@@ -64,21 +106,22 @@ El usuario puede jugar en cualquier dispositivo como tablet, celular o computado
 <img src="src\img\prototipoAf2.jpeg">
 
 
-## 4. Pre-requisitos
+## 5. Pre-requisitos
 _Necesario `npm`_
 
 ```
 npm install -g sass
 ```
 
-# 5. Demo 
+## 6. Demo 
 
-* deploy del proyecto [DEPLOY]( https://estefaniazocar.github.io/BOG005-memory-match/src)
+* deploy del proyecto GitHub Page [DEPLOY]( https://estefaniazocar.github.io/BOG005-memory-match/src)
+* deploy del proyecto Netlify [DEPLOY]( https://pokevel.netlify.app/)
 * repositorio del proyecto [REPO](https://github.com/Ximena-21/memory-match)
 * repositorio del proyecto [REPO](https://github.com/EstefaniAzocar/BOG005-memory-match)
 * Figma del proyecto [REPO](https://www.figma.com/file/yiakuYAqHw9YZUnOveyVCN/memory-match?node-id=0%3A1)
 
-# 6. Autores 
+## 7. Autores 
 
 _Proyecto desarrollado por:_
 
