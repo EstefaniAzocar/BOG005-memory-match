@@ -51,7 +51,7 @@ const Levels = [
 const Game = {
     // userName: "juan",
     score: 0,
-    actuallyLvl: 5,
+    actuallyLvl: 1,
     category: "pokemon",
     timer: null, //se necesita que guarde un tiemp[o que no existe aun
     time:0,
