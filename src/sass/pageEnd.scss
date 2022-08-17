@@ -14,8 +14,7 @@
         position: absolute;
         top: 0;
         width: 100%;
-        max-width: 500px;
-        max-height: 900px;
+        height: 100%;
     }
 
 
@@ -25,7 +24,7 @@
         gap: 10px;
         padding: 25px 0;
         @include flex-column-center;
-        position: absolute;
+        z-index: 2;
     }
 
     &_msgBox{
@@ -75,24 +74,3 @@
     }
 }
 
-
-@media (min-width: 750px) {
-    
-    .gameEnd{
-        
-        &_congratulation{
-            max-width: 100%;
-            max-height: 500px;
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-
-    .gameEnd{
-        
-        &_congratulation{
-            max-height: 680px;
-        }
-    }
-}

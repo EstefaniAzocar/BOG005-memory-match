@@ -1,7 +1,7 @@
 .gameStart {
   width: 100%;
   min-height: 100vh;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +13,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px; }
+    gap: 10px; }
   .gameStart_title {
-    width: 80%;
-    max-width: 400px;
+    width: 70%;
+    max-width: 350px;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -38,19 +38,19 @@
     align-items: center;
     justify-content: center; }
   .gameStart_containerButton {
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center; }
   .gameStart_buttonPlay {
-    width: 80%;
-    max-width: 160px;
+    width: 100%;
+    max-width: 100px;
     padding: 10px 15px;
     border-radius: 50%;
     border-style: none;
     background-color: #00A3FF;
     font-family: "Mochiy Pop One", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; }
@@ -60,12 +60,14 @@
 
 @media (min-width: 750px) {
   .gameStart_buttonPlay {
-    max-width: 180px;
+    max-width: 150px;
     padding: 15px 20px;
-    font-size: 24px; } }
+    font-size: 20px; } }
 
 @media (min-width: 1024px) {
   .gameStart_buttonPlay {
-    max-height: 200px;
-    font-size: 28px;
-    padding: 20px 25px; } }
+    max-width: 180px;
+    font-size: 24px;
+    padding: 20px 25px; }
+  .gameStart_title {
+    max-width: 380px; } }

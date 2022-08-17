@@ -56,8 +56,11 @@ function checkCards(event) {
     console.log('inicio el juego')
   }
 
+  console.log('abriendo muchas',listUncoveredCard.length)
+
   if (listUncoveredCard.length == 2) {
 
+  
     // console.log('segunda apertura')
 
     const showCard1 = listUncoveredCard[0].id
@@ -90,10 +93,10 @@ function checkCards(event) {
       listUncoveredCard.forEach(item => {
 
         item.classList.remove('uncoveredCard');
-
-        setTimeout(() =>
+        
+        setTimeout(() =>{
           item.classList.remove('toggleCard')
-          , 600);
+        }, 600);
 
       });
 
@@ -109,9 +112,9 @@ function checkCards(event) {
 
   if (quantityShowCards == arrayShowCards) {
     nextLevel()
-    console.log('se abrierontodas las cartas del nivel actual')
+    // console.log('se abrierontodas las cartas del nivel actual')
   } else {
-    console.log('faltan descubrir cartas')
+    // console.log('faltan descubrir cartas')
   }
 }
 

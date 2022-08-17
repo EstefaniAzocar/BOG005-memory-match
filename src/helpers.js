@@ -15,19 +15,6 @@ const dictionaryPages = {
 //funcion que nos permite cambiar de pagina 
 function changePage (pageToView) {
 
-    // const pages = document.querySelectorAll('.pages')
-    // const containerPage = document.querySelector(`.${pageToView}`)
-
-    // console.log('pagina que ese esta viendo', containerPage)
-    // pages.forEach(page=>{
-    //     if(page !== containerPage) {
-    //         page.classList.add('hidden')
-    //     }
-    // })
-
-    // containerPage.classList.remove('hidden')
-    // const document = documentMock || document
-
     document.querySelector('body>:last-child').remove()
 
     const functionPageToRender = dictionaryPages[pageToView]
