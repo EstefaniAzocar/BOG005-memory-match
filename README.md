@@ -50,7 +50,7 @@ Que pueda jugar en en movil o computadora
 El usuario puede jugar en cualquier dispositivo como tablet, celular o computadora.
 
 ### Diseño de la Interfaz de Usuario
-!(.\img\prototipobf1.jpeg)
+
 #### Prototipo de baja fidelidad
 
 <img src="src\img\prototipobf1.jpeg" >
@@ -59,34 +59,9 @@ El usuario puede jugar en cualquier dispositivo como tablet, celular o computado
 
 #### Prototipo de alta fidelidad
 
+<img src="src\img\prototipoAf.jpeg">
 
-
-<table>
-    <tr>
-        <td>Landing Page / Inicio -  Quienes somos</td>
-    </tr>
-    <tr>
-        <td><img src="tbajaFidelidad1.png" width=500 ></td>
-    </tr>
-    <tr>
-        <td>Landing Page / Ventajas - Libros</td>
-    </tr>
-    <tr>
-        <td><img src="tbajaFidelidad2.png" width=500 ></td>
-    </tr>
-    <tr>
-        <td>Landing Page / Planes - Footer</td>
-    </tr>
-    <tr>
-        <td><img src="tbajaFidelidad3.png" width=500 ></td>
-    </tr>
- </table>
-
- ### Prototipo de alta fidelidad
-
-  #### Figma del proyecto
-  
-  [REPO](https://www.figma.com/file/Rqf9q5jEtwQEcv2wGg6kLz/BookPod?node-id=0%3A1)
+<img src="src\img\prototipoAf2.jpeg">
 
 
 ## 4. Pre-requisitos
@@ -98,12 +73,14 @@ npm install -g sass
 
 # 5. Demo 
 
-* deploy del proyecto [DEPLOY](https://bookpodd.netlify.app/)
-* repositorio del proyecto [REPO](https://github.com/Ximena-21/cardValidation)
-* Figma del proyecto [REPO](https://www.figma.com/file/Rqf9q5jEtwQEcv2wGg6kLz/BookPod?node-id=0%3A1)
+* deploy del proyecto [DEPLOY]( https://estefaniazocar.github.io/BOG005-memory-match/src)
+* repositorio del proyecto [REPO](https://github.com/Ximena-21/memory-match)
+* repositorio del proyecto [REPO](https://github.com/EstefaniAzocar/BOG005-memory-match)
+* Figma del proyecto [REPO](https://www.figma.com/file/yiakuYAqHw9YZUnOveyVCN/memory-match?node-id=0%3A1)
 
 # 6. Autores 
 
 _Proyecto desarrollado por:_
 
 * **Paula Ximena Anzola** - *Ingeniera ambiental* - [proyectos](https://github.com/Ximena-21)
+* **Estefani Azocar** - *Ingeniera Informatica* - [proyectos](https://github.com/EstefaniAzocar)
