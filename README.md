@@ -49,6 +49,7 @@ Que pueda jugar en en movil o computadora
 El usuario puede jugar en cualquier dispositivo como tablet, celular o computadora.
 
 ## 3. Objetivos de aprendizaje
+Con el desarrollo de este proyecto se alcanzaron los siguientes objetivos de aprendizaje.
 
 ### HTML
 - [x] **Uso de HTML semántico**
