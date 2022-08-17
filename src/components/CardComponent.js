@@ -93,10 +93,10 @@ function checkCards(event) {
       listUncoveredCard.forEach(item => {
 
         item.classList.remove('uncoveredCard');
-
-        setTimeout(() =>
+        
+        setTimeout(() =>{
           item.classList.remove('toggleCard')
-          , 3400);
+        }, 600);
 
       });
 
