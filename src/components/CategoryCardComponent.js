@@ -13,7 +13,7 @@ function CategoryCardComponent (category){
 
     cardCategory.addEventListener('click',()=>{
         Game.category = cardCategory.id
-        console.log(Game)
+        //console.log(Game)
         changePage('game')
     })
 

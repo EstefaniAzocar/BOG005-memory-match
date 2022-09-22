@@ -27,7 +27,7 @@ export default function GameStartPage () {
 
 
     playInit.addEventListener('click', () => {
-        console.log('el boton play sirve')
+        //console.log('el boton play sirve')
         changePage('gameTheme')
 
     });
